@@ -1,0 +1,69 @@
+{
+	"version": "1.0",
+	"modules": {
+		"real_matmul": {
+			"proto_instances": {
+				"/AESL_inst_real_matmul_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst_n"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_real_matmul_Pipeline_INNER_ROW_COL_fu_205/grp_real_matmul_Pipeline_INNER_ROW_COL_fu_205_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_real_matmul_Pipeline_MAT_A_ROWS_MAT_A_COLS_fu_184/grp_real_matmul_Pipeline_MAT_A_ROWS_MAT_A_COLS_fu_184_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_real_matmul_Pipeline_MAT_B_ROWS_MAT_B_COLS_fu_197/grp_real_matmul_Pipeline_MAT_B_ROWS_MAT_B_COLS_fu_197_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_real_matmul_Pipeline_MAT_C_ROWS_INIT_MAT_C_COLS_INIT_fu_192/grp_real_matmul_Pipeline_MAT_C_ROWS_INIT_MAT_C_COLS_INIT_fu_192_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_real_matmul_Pipeline_MAT_C_ROWS_MAT_C_COLS_fu_216/grp_real_matmul_Pipeline_MAT_C_ROWS_MAT_C_COLS_fu_216_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

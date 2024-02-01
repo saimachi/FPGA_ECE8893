@@ -1,0 +1,121 @@
+---
+MainSourceFile:  'C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/real_proj/solution1/.autopilot/db/real_matmul.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        'C:\Tools\Xilinx-2-HLS\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          131454
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Tools\Xilinx-2-HLS\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          359114
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Tools\Xilinx-2-HLS\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          359578
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Tools\Xilinx-2-HLS\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          360043
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'C:\Tools\Xilinx-2-HLS\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          643140
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_27_1:  '
+    FileOffset:      27
+    FilePath:        real_matmul.cpp
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          1012104
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_27_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_45_1:  '
+    FileOffset:      45
+    FilePath:        real_matmul.cpp
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          1012471
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_45_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_46_2:  '
+    FileOffset:      46
+    FilePath:        real_matmul.cpp
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          1012499
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_46_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_53_3:  '
+    FileOffset:      53
+    FilePath:        real_matmul.cpp
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          1012669
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_53_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_54_4:  '
+    FileOffset:      54
+    FilePath:        real_matmul.cpp
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          1012697
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_54_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_56_5:  '
+    FileOffset:      56
+    FilePath:        real_matmul.cpp
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          1012750
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_56_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_63_6:  '
+    FileOffset:      63
+    FilePath:        real_matmul.cpp
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          1012851
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_63_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_64_7:  '
+    FileOffset:      64
+    FilePath:        real_matmul.cpp
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          1012879
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_64_7: '
+...

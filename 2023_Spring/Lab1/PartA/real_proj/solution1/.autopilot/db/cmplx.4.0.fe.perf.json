@@ -1,0 +1,18 @@
+{
+  "0": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "real_matmul.cpp",
+    "fileloc": 16,
+    "instructions": 133,
+    "loads": {
+      "L": 3,
+      "T": 2
+    },
+    "name": "real_matmul",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 133
+  }
+}

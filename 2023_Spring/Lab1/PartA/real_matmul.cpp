@@ -9,6 +9,10 @@
 
 #include "real.h"
 
+#define BLOCK_SIZE 2
+
+void block_matmul(real_t[M][N], real_t[N][K], int, real_t[M][K]);
+
 void real_matmul( 
     real_t MatA_DRAM[M][N], 
     real_t MatB_DRAM[N][K], 
@@ -19,59 +23,47 @@ void real_matmul(
 #pragma HLS interface m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem
 
 #pragma HLS interface s_axilite port=return
-    
-    real_t MatA[M][N];
-    real_t MatB[N][K];
-    real_t MatC[M][K];
 
-    // Read in the data (Matrix A) from DRAM to BRAM
-    MAT_A_ROWS:
-    for(int i = 0; i < M; i++) {
-        MAT_A_COLS:
-        for(int j = 0; j < N; j++) {
-            MatA[i][j] = MatA_DRAM[i][j];
-        }
+    for (int counter = 0; counter < (M / BLOCK_SIZE) * (K / BLOCK_SIZE); counter++) {
+    	block_matmul(MatA_DRAM, MatB_DRAM, counter, MatC_DRAM);
     }
+}
 
-    // Read in the data (Matrix B) from DRAM to BRAM
-    MAT_B_ROWS:
-    for(int i = 0; i < N; i++) {
-        MAT_B_COLS:
-        for(int j = 0; j < K; j++) {
-            MatB[i][j] = MatB_DRAM[i][j];
-        }
-    }
+void block_matmul(
+		real_t MatA_DRAM[M][N],
+		real_t MatB_DRAM[N][K],
+		int counter,
+		real_t MatC_DRAM[M][K]
+) {
+	real_t MatA_BRAM[BLOCK_SIZE][N];
+	real_t MatB_BRAM[N][BLOCK_SIZE];
+	real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE] = {};
 
-    // Initialize product matrix C
-    MAT_C_ROWS_INIT:
-    for(int i = 0; i < M; i++) {
-        MAT_C_COLS_INIT:
-        for(int j = 0; j < K; j++) {
-            MatC[i][j] = 0;
-        }
-    }
+	int i, j, k;
 
-    // Perform matrix multiplication 
-    OUTER_ROWS:
-    for(int i = 0; i < M; i++) {
-        OUTER_COLS:
-        for(int j = 0; j < K; j++) {
-            
-            INNER_ROW_COL:
-            for(int p = 0; p < N; p++) {
-                MatC[i][j] += MatA[i][p] * MatB[p][j];
-            }
+	// Load values from DRAM into BRAM
+	for (i = 0; i < BLOCK_SIZE; i++) {
+		for (j = 0; j < N; j++) {
+			MatA_BRAM[i][j] = MatA_DRAM[BLOCK_SIZE * (counter / (K / BLOCK_SIZE)) + i][j];
+			MatB_BRAM[j][i] = MatB_DRAM[j][i + BLOCK_SIZE * (counter % (K / BLOCK_SIZE))];
+		}
+	}
 
-        }
-    }
+	// Calculation Loop
+	for (i = 0; i < BLOCK_SIZE; i++) {
+		for (j = 0; j < BLOCK_SIZE; j++) {
+			MatC_BRAM[i][j] = 0;
+			for (k = 0; k < N; k++) {
+				MatC_BRAM[i][j] += MatA_BRAM[i][k] * MatB_BRAM[k][j];
+			}
+		}
+	}
 
-    // Write back the data from BRAM to DRAM
-    MAT_C_ROWS:
-    for(int i = 0; i < M; i++) {
-        MAT_C_COLS:
-        for(int j = 0; j < K; j++) {
-            MatC_DRAM[i][j] = MatC[i][j];
-        }
-    }
-
+	// Write values from BRAM back to DRAM
+	for (i = 0; i < BLOCK_SIZE; i++) {
+		for (j = 0; j < BLOCK_SIZE; j++) {
+			// printf("(%d, %d)\n", BLOCK_SIZE * (counter / (K / BLOCK_SIZE)) + i, j + BLOCK_SIZE * (counter % (K / BLOCK_SIZE)));
+			MatC_DRAM[BLOCK_SIZE * (counter / (K / BLOCK_SIZE)) + i][j + BLOCK_SIZE * (counter % (K / BLOCK_SIZE))] = MatC_BRAM[i][j];
+		}
+	}
 }

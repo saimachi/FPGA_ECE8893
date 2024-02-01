@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/script.tcl:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=real_matmul" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatA_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatB_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="real_matmul.cpp:20:0" msg_body="Inlining function 'block_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], int, ap_int&lt;16&gt; (*) [200])' into 'real_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], ap_int&lt;16&gt; (*) [200])'">
+        <args Callee="block_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], int, ap_int&lt;16&gt; (*) [200])" Callee-DebugLoc="File real_matmul.cpp Line 37 Column 0" Caller="real_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], ap_int&lt;16&gt; (*) [200])" Caller-DebugLoc="File real_matmul.cpp Line 20 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

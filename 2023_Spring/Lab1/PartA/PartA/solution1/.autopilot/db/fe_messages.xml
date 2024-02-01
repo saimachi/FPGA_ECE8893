@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/PartA/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=real_matmul" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatA_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatB_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:55:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

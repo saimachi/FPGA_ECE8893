@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="real_matmul.cpp" path="C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_matmul.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

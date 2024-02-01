@@ -21,14 +21,16 @@ int main()
     // Generate Matrix A with random values
     for(int i = 0; i < M; i++) {
         for(int j = 0; j < N; j++) {
-            MatA_tb[i][j] = rand() % 50;
+            // MatA_tb[i][j] = rand() % 50;
+            MatA_tb[i][j] = 1;
         }
     }
 
     // Generate Matrix B with random values
     for(int i = 0; i < N; i++) {
         for(int j = 0; j < K; j++) {
-            MatB_tb[i][j] = rand() % 50;
+            // MatB_tb[i][j] = rand() % 50;
+            MatB_tb[i][j] = 1;
         }
     }
 
