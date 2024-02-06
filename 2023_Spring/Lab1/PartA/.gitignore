@@ -1,4 +1,4 @@
 .vscode
 *.log
 *.exe
-real_proj/**
+real_proj/
