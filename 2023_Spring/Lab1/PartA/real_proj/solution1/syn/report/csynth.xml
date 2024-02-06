@@ -19,40 +19,32 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>6350001</Best-caseLatency>
-            <Average-caseLatency>6350001</Average-caseLatency>
-            <Worst-caseLatency>6350001</Worst-caseLatency>
-            <Best-caseRealTimeLatency>63.500 ms</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>63.500 ms</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>63.500 ms</Worst-caseRealTimeLatency>
-            <Interval-min>6350002</Interval-min>
-            <Interval-max>6350002</Interval-max>
+            <Best-caseLatency>1702501</Best-caseLatency>
+            <Average-caseLatency>1702501</Average-caseLatency>
+            <Worst-caseLatency>1702501</Worst-caseLatency>
+            <Best-caseRealTimeLatency>17.025 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>17.025 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>17.025 ms</Worst-caseRealTimeLatency>
+            <Interval-min>1702502</Interval-min>
+            <Interval-max>1702502</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
-            <VITIS_LOOP_27_1>
+            <CallBlockMatmul>
                 <Slack>7.30</Slack>
-                <TripCount>5000</TripCount>
-                <Latency>6350000</Latency>
-                <AbsoluteTimeLatency>63500000</AbsoluteTimeLatency>
-                <IterationLatency>1270</IterationLatency>
+                <TripCount>1250</TripCount>
+                <Latency>1702500</Latency>
+                <AbsoluteTimeLatency>17025000</AbsoluteTimeLatency>
+                <IterationLatency>1362</IterationLatency>
                 <InstanceList/>
-                <VITIS_LOOP_53_3_VITIS_LOOP_54_4>
-                    <Slack>7.30</Slack>
-                    <TripCount>4</TripCount>
-                    <Latency>636</Latency>
-                    <AbsoluteTimeLatency>6360</AbsoluteTimeLatency>
-                    <IterationLatency>159</IterationLatency>
-                    <InstanceList/>
-                </VITIS_LOOP_53_3_VITIS_LOOP_54_4>
-            </VITIS_LOOP_27_1>
+            </CallBlockMatmul>
         </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>4</BRAM_18K>
-            <DSP>2</DSP>
-            <FF>2575</FF>
-            <LUT>3286</LUT>
+            <BRAM_18K>10</BRAM_18K>
+            <DSP>151</DSP>
+            <FF>26707</FF>
+            <LUT>22737</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -826,39 +818,54 @@
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
-        <TopModule MAX_DEPTH="3">
+        <TopModule MAX_DEPTH="4">
             <ModuleName>real_matmul</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210</InstName>
-                    <ModuleName>real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2</ModuleName>
+                    <InstName>grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179</InstName>
+                    <ModuleName>real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>210</ID>
-                    <BindInstances>add_ln45_1_fu_203_p2 add_ln45_fu_212_p2 mul_2ns_9ns_10_1_1_U1 add_ln47_2_fu_382_p2 add_ln48_3_fu_399_p2 mul_8ns_10ns_17_1_1_U2 add_ln46_fu_300_p2</BindInstances>
+                    <ID>179</ID>
+                    <BindInstances>add_ln48_1_fu_181_p2 add_ln48_fu_198_p2 add_ln49_fu_230_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221</InstName>
-                    <ModuleName>real_matmul_Pipeline_VITIS_LOOP_56_5</ModuleName>
+                    <InstName>grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190</InstName>
+                    <ModuleName>real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>221</ID>
-                    <BindInstances>add_ln56_fu_124_p2 add_ln57_1_fu_134_p2 add_ln57_2_fu_153_p2 mac_muladd_16s_16s_16ns_16_4_1_U11 mac_muladd_16s_16s_16ns_16_4_1_U11</BindInstances>
+                    <ID>190</ID>
+                    <BindInstances>add_ln55_1_fu_200_p2 add_ln55_fu_242_p2 mul_8ns_10ns_17_1_1_U7 add_ln56_fu_223_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230</InstName>
-                    <ModuleName>real_matmul_Pipeline_VITIS_LOOP_63_6</ModuleName>
+                    <InstName>grp_PerformMatrixCalculation_fu_202</InstName>
+                    <ModuleName>PerformMatrixCalculation</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>230</ID>
-                    <BindInstances>add_ln63_fu_184_p2 empty_fu_168_p2 mul_7ns_10ns_16_1_1_U18</BindInstances>
+                    <ID>202</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192</InstName>
+                            <ModuleName>PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>11192</ID>
+                            <BindInstances>add_ln65_1_fu_11490_p2 add_ln65_fu_11499_p2 add_ln67_fu_14363_p2 mac_muladd_16s_16s_16ns_16_4_1_U530 mul_16s_16s_16_1_1_U444 mul_16s_16s_16_1_1_U445 mac_muladd_16s_16s_16ns_16_4_1_U531 mul_16s_16s_16_1_1_U446 mac_muladd_16s_16s_16ns_16_4_1_U532 mac_muladd_16s_16s_16ns_16_4_1_U594 mul_16s_16s_16_1_1_U448 mac_muladd_16s_16s_16ns_16_4_1_U533 mul_16s_16s_16_1_1_U449 mac_muladd_16s_16s_16ns_16_4_1_U534 mul_16s_16s_16_1_1_U450 mac_muladd_16s_16s_16ns_16_4_1_U535 mul_16s_16s_16_1_1_U451 mac_muladd_16s_16s_16ns_16_4_1_U536 mac_muladd_16s_16s_16ns_16_4_1_U595 mul_16s_16s_16_1_1_U453 mac_muladd_16s_16s_16ns_16_4_1_U537 mul_16s_16s_16_1_1_U454 mac_muladd_16s_16s_16ns_16_4_1_U538 mul_16s_16s_16_1_1_U455 mac_muladd_16s_16s_16ns_16_4_1_U539 mul_16s_16s_16_1_1_U456 mac_muladd_16s_16s_16ns_16_4_1_U540 mac_muladd_16s_16s_16ns_16_4_1_U596 mul_16s_16s_16_1_1_U458 mac_muladd_16s_16s_16ns_16_4_1_U541 mul_16s_16s_16_1_1_U459 mac_muladd_16s_16s_16ns_16_4_1_U542 mac_muladd_16s_16s_16ns_16_4_1_U597 mul_16s_16s_16_1_1_U461 mac_muladd_16s_16s_16ns_16_4_1_U543 mul_16s_16s_16_1_1_U462 mac_muladd_16s_16s_16ns_16_4_1_U544 mac_muladd_16s_16s_16ns_16_4_1_U598 mul_16s_16s_16_1_1_U464 mac_muladd_16s_16s_16ns_16_4_1_U545 mul_16s_16s_16_1_1_U465 mac_muladd_16s_16s_16ns_16_4_1_U546 mul_16s_16s_16_1_1_U466 mac_muladd_16s_16s_16ns_16_4_1_U547 mul_16s_16s_16_1_1_U467 mac_muladd_16s_16s_16ns_16_4_1_U548 mac_muladd_16s_16s_16ns_16_4_1_U599 mul_16s_16s_16_1_1_U469 mac_muladd_16s_16s_16ns_16_4_1_U549 mul_16s_16s_16_1_1_U470 mac_muladd_16s_16s_16ns_16_4_1_U550 mac_muladd_16s_16s_16ns_16_4_1_U600 mul_16s_16s_16_1_1_U472 mac_muladd_16s_16s_16ns_16_4_1_U551 mul_16s_16s_16_1_1_U473 mac_muladd_16s_16s_16ns_16_4_1_U552 mac_muladd_16s_16s_16ns_16_4_1_U601 mul_16s_16s_16_1_1_U475 mac_muladd_16s_16s_16ns_16_4_1_U553 mul_16s_16s_16_1_1_U476 mac_muladd_16s_16s_16ns_16_4_1_U554 mul_16s_16s_16_1_1_U477 mac_muladd_16s_16s_16ns_16_4_1_U555 mul_16s_16s_16_1_1_U478 mac_muladd_16s_16s_16ns_16_4_1_U556 mac_muladd_16s_16s_16ns_16_4_1_U602 mul_16s_16s_16_1_1_U480 mac_muladd_16s_16s_16ns_16_4_1_U557 mul_16s_16s_16_1_1_U481 mac_muladd_16s_16s_16ns_16_4_1_U558 mac_muladd_16s_16s_16ns_16_4_1_U603 mul_16s_16s_16_1_1_U483 mac_muladd_16s_16s_16ns_16_4_1_U559 mul_16s_16s_16_1_1_U484 mac_muladd_16s_16s_16ns_16_4_1_U560 mac_muladd_16s_16s_16ns_16_4_1_U604 mul_16s_16s_16_1_1_U486 mac_muladd_16s_16s_16ns_16_4_1_U561 mul_16s_16s_16_1_1_U487 mac_muladd_16s_16s_16ns_16_4_1_U562 mul_16s_16s_16_1_1_U488 mac_muladd_16s_16s_16ns_16_4_1_U563 mul_16s_16s_16_1_1_U489 mac_muladd_16s_16s_16ns_16_4_1_U564 mac_muladd_16s_16s_16ns_16_4_1_U605 mul_16s_16s_16_1_1_U491 mac_muladd_16s_16s_16ns_16_4_1_U565 mul_16s_16s_16_1_1_U492 mac_muladd_16s_16s_16ns_16_4_1_U566 mul_16s_16s_16_1_1_U493 mac_muladd_16s_16s_16ns_16_4_1_U567 mul_16s_16s_16_1_1_U494 mac_muladd_16s_16s_16ns_16_4_1_U568 mac_muladd_16s_16s_16ns_16_4_1_U606 mul_16s_16s_16_1_1_U496 mac_muladd_16s_16s_16ns_16_4_1_U569 mul_16s_16s_16_1_1_U497 mac_muladd_16s_16s_16ns_16_4_1_U570 mul_16s_16s_16_1_1_U498 mac_muladd_16s_16s_16ns_16_4_1_U571 mul_16s_16s_16_1_1_U499 mac_muladd_16s_16s_16ns_16_4_1_U572 mac_muladd_16s_16s_16ns_16_4_1_U607 mul_16s_16s_16_1_1_U501 mac_muladd_16s_16s_16ns_16_4_1_U573 mul_16s_16s_16_1_1_U502 mac_muladd_16s_16s_16ns_16_4_1_U574 mac_muladd_16s_16s_16ns_16_4_1_U608 mul_16s_16s_16_1_1_U504 mac_muladd_16s_16s_16ns_16_4_1_U575 mul_16s_16s_16_1_1_U505 mac_muladd_16s_16s_16ns_16_4_1_U576 mac_muladd_16s_16s_16ns_16_4_1_U609 mul_16s_16s_16_1_1_U507 mac_muladd_16s_16s_16ns_16_4_1_U577 mul_16s_16s_16_1_1_U508 mac_muladd_16s_16s_16ns_16_4_1_U578 mul_16s_16s_16_1_1_U509 mac_muladd_16s_16s_16ns_16_4_1_U579 mul_16s_16s_16_1_1_U510 mac_muladd_16s_16s_16ns_16_4_1_U580 mac_muladd_16s_16s_16ns_16_4_1_U610 mul_16s_16s_16_1_1_U512 mac_muladd_16s_16s_16ns_16_4_1_U581 mul_16s_16s_16_1_1_U513 mac_muladd_16s_16s_16ns_16_4_1_U582 mac_muladd_16s_16s_16ns_16_4_1_U611 mul_16s_16s_16_1_1_U515 mac_muladd_16s_16s_16ns_16_4_1_U583 mul_16s_16s_16_1_1_U516 mac_muladd_16s_16s_16ns_16_4_1_U584 mac_muladd_16s_16s_16ns_16_4_1_U612 mul_16s_16s_16_1_1_U518 mac_muladd_16s_16s_16ns_16_4_1_U585 mul_16s_16s_16_1_1_U519 mac_muladd_16s_16s_16ns_16_4_1_U586 mul_16s_16s_16_1_1_U520 mac_muladd_16s_16s_16ns_16_4_1_U587 mul_16s_16s_16_1_1_U521 mac_muladd_16s_16s_16ns_16_4_1_U588 mac_muladd_16s_16s_16ns_16_4_1_U613 mul_16s_16s_16_1_1_U523 mac_muladd_16s_16s_16ns_16_4_1_U589 mul_16s_16s_16_1_1_U524 mac_muladd_16s_16s_16ns_16_4_1_U590 mac_muladd_16s_16s_16ns_16_4_1_U614 mul_16s_16s_16_1_1_U526 mac_muladd_16s_16s_16ns_16_4_1_U591 mul_16s_16s_16_1_1_U527 mac_muladd_16s_16s_16ns_16_4_1_U592 mac_muladd_16s_16s_16ns_16_4_1_U615 mul_16s_16s_16_1_1_U529 mac_muladd_16s_16s_16ns_16_4_1_U593 mac_muladd_16s_16s_16ns_16_4_1_U530 mac_muladd_16s_16s_16ns_16_4_1_U531 mac_muladd_16s_16s_16ns_16_4_1_U532 mac_muladd_16s_16s_16ns_16_4_1_U533 mac_muladd_16s_16s_16ns_16_4_1_U594 add_ln70_6_fu_17210_p2 mac_muladd_16s_16s_16ns_16_4_1_U534 mac_muladd_16s_16s_16ns_16_4_1_U535 mac_muladd_16s_16s_16ns_16_4_1_U536 mac_muladd_16s_16s_16ns_16_4_1_U537 mac_muladd_16s_16s_16ns_16_4_1_U595 add_ln70_14_fu_17214_p2 mac_muladd_16s_16s_16ns_16_4_1_U538 mac_muladd_16s_16s_16ns_16_4_1_U539 add_ln70_19_fu_17190_p2 mac_muladd_16s_16s_16ns_16_4_1_U540 mac_muladd_16s_16s_16ns_16_4_1_U541 mac_muladd_16s_16s_16ns_16_4_1_U596 add_ln70_23_fu_17218_p2 mac_muladd_16s_16s_16ns_16_4_1_U542 mac_muladd_16s_16s_16ns_16_4_1_U543 mac_muladd_16s_16s_16ns_16_4_1_U597 mac_muladd_16s_16s_16ns_16_4_1_U544 mac_muladd_16s_16s_16ns_16_4_1_U545 mac_muladd_16s_16s_16ns_16_4_1_U598 add_ln70_32_fu_17222_p2 mac_muladd_16s_16s_16ns_16_4_1_U546 mac_muladd_16s_16s_16ns_16_4_1_U547 mac_muladd_16s_16s_16ns_16_4_1_U548 mac_muladd_16s_16s_16ns_16_4_1_U549 mac_muladd_16s_16s_16ns_16_4_1_U599 add_ln70_42_fu_17226_p2 mac_muladd_16s_16s_16ns_16_4_1_U550 mac_muladd_16s_16s_16ns_16_4_1_U551 mac_muladd_16s_16s_16ns_16_4_1_U600 mac_muladd_16s_16s_16ns_16_4_1_U552 mac_muladd_16s_16s_16ns_16_4_1_U553 mac_muladd_16s_16s_16ns_16_4_1_U601 add_ln70_51_fu_17230_p2 mac_muladd_16s_16s_16ns_16_4_1_U554 mac_muladd_16s_16s_16ns_16_4_1_U555 add_ln70_56_fu_17194_p2 mac_muladd_16s_16s_16ns_16_4_1_U556 mac_muladd_16s_16s_16ns_16_4_1_U557 mac_muladd_16s_16s_16ns_16_4_1_U602 add_ln70_60_fu_17234_p2 mac_muladd_16s_16s_16ns_16_4_1_U558 mac_muladd_16s_16s_16ns_16_4_1_U559 mac_muladd_16s_16s_16ns_16_4_1_U603 mac_muladd_16s_16s_16ns_16_4_1_U560 mac_muladd_16s_16s_16ns_16_4_1_U561 mac_muladd_16s_16s_16ns_16_4_1_U604 add_ln70_69_fu_17238_p2 mac_muladd_16s_16s_16ns_16_4_1_U562 mac_muladd_16s_16s_16ns_16_4_1_U563 add_ln70_76_fu_17198_p2 mac_muladd_16s_16s_16ns_16_4_1_U564 mac_muladd_16s_16s_16ns_16_4_1_U565 mac_muladd_16s_16s_16ns_16_4_1_U605 add_ln70_80_fu_17242_p2 mac_muladd_16s_16s_16ns_16_4_1_U566 mac_muladd_16s_16s_16ns_16_4_1_U567 mac_muladd_16s_16s_16ns_16_4_1_U568 mac_muladd_16s_16s_16ns_16_4_1_U569 mac_muladd_16s_16s_16ns_16_4_1_U606 add_ln70_88_fu_17246_p2 mac_muladd_16s_16s_16ns_16_4_1_U570 mac_muladd_16s_16s_16ns_16_4_1_U571 add_ln70_93_fu_17202_p2 mac_muladd_16s_16s_16ns_16_4_1_U572 mac_muladd_16s_16s_16ns_16_4_1_U573 mac_muladd_16s_16s_16ns_16_4_1_U607 add_ln70_97_fu_17250_p2 mac_muladd_16s_16s_16ns_16_4_1_U574 mac_muladd_16s_16s_16ns_16_4_1_U575 mac_muladd_16s_16s_16ns_16_4_1_U608 mac_muladd_16s_16s_16ns_16_4_1_U576 mac_muladd_16s_16s_16ns_16_4_1_U577 mac_muladd_16s_16s_16ns_16_4_1_U609 add_ln70_106_fu_17254_p2 mac_muladd_16s_16s_16ns_16_4_1_U578 mac_muladd_16s_16s_16ns_16_4_1_U579 mac_muladd_16s_16s_16ns_16_4_1_U580 mac_muladd_16s_16s_16ns_16_4_1_U581 mac_muladd_16s_16s_16ns_16_4_1_U610 add_ln70_116_fu_17258_p2 mac_muladd_16s_16s_16ns_16_4_1_U582 mac_muladd_16s_16s_16ns_16_4_1_U583 mac_muladd_16s_16s_16ns_16_4_1_U611 mac_muladd_16s_16s_16ns_16_4_1_U584 mac_muladd_16s_16s_16ns_16_4_1_U585 mac_muladd_16s_16s_16ns_16_4_1_U612 add_ln70_125_fu_17262_p2 mac_muladd_16s_16s_16ns_16_4_1_U586 mac_muladd_16s_16s_16ns_16_4_1_U587 add_ln70_130_fu_17206_p2 mac_muladd_16s_16s_16ns_16_4_1_U588 mac_muladd_16s_16s_16ns_16_4_1_U589 mac_muladd_16s_16s_16ns_16_4_1_U613 add_ln70_134_fu_17266_p2 mac_muladd_16s_16s_16ns_16_4_1_U590 mac_muladd_16s_16s_16ns_16_4_1_U591 mac_muladd_16s_16s_16ns_16_4_1_U614 mac_muladd_16s_16s_16ns_16_4_1_U592 mac_muladd_16s_16s_16ns_16_4_1_U593 mac_muladd_16s_16s_16ns_16_4_1_U615 add_ln70_143_fu_17270_p2 add_ln66_fu_16165_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                </Instance>
+                <Instance>
+                    <InstName>grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215</InstName>
+                    <ModuleName>real_matmul_Pipeline_VITIS_LOOP_78_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>215</ID>
+                    <BindInstances>add_ln77_4_fu_188_p2 add_ln77_fu_200_p2 add_ln77_1_fu_286_p2 mul_7ns_10ns_16_1_1_U1829 add_ln80_fu_250_p2 add_ln78_fu_256_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>MatA_BRAM_U MatB_BRAM_U add_ln27_fu_283_p2 counter_2_fu_295_p2 mul_7ns_10ns_16_1_1_U28 add_ln33_fu_332_p2 add_ln53_1_fu_362_p2 add_ln53_fu_368_p2 mul_2ns_9ns_9_1_1_U29 add_ln54_fu_447_p2 mac_muladd_6ns_9s_14ns_15_4_1_U30 mac_muladd_6ns_9s_14ns_15_4_1_U30 add_ln27_2_fu_402_p2</BindInstances>
+            <BindInstances>MatA_BRAM_U MatA_BRAM_1_U MatA_BRAM_2_U MatA_BRAM_3_U MatB_BRAM_U MatB_BRAM_1_U MatB_BRAM_2_U MatB_BRAM_3_U MatC_BRAM_U add_ln29_fu_246_p2 counter_2_fu_258_p2 mul_7ns_10ns_16_1_1_U1836 add_ln30_fu_309_p2 mac_muladd_5ns_9s_13ns_14_4_1_U1837 mac_muladd_5ns_9s_13ns_14_4_1_U1837 add_ln29_2_fu_353_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2</Name>
+            <Name>real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1</Name>
             <Loops>
-                <VITIS_LOOP_45_1_VITIS_LOOP_46_2/>
+                <LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -867,27 +874,87 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>612</Best-caseLatency>
-                    <Average-caseLatency>612</Average-caseLatency>
-                    <Worst-caseLatency>612</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>6.120 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>6.120 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>6.120 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>612</PipelineInitiationInterval>
+                    <Best-caseLatency>603</Best-caseLatency>
+                    <Average-caseLatency>603</Average-caseLatency>
+                    <Worst-caseLatency>603</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>6.030 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.030 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>6.030 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>603</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_45_1_VITIS_LOOP_46_2>
-                        <Name>VITIS_LOOP_45_1_VITIS_LOOP_46_2</Name>
+                    <LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1>
+                        <Name>LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>300</TripCount>
-                        <Latency>610</Latency>
-                        <AbsoluteTimeLatency>6.100 us</AbsoluteTimeLatency>
-                        <PipelineII>2</PipelineII>
+                        <TripCount>600</TripCount>
+                        <Latency>601</Latency>
+                        <AbsoluteTimeLatency>6.010 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>52</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>145</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_1_fu_181_p2" SOURCE="real_matmul.cpp:48" URAM="0" VARIABLE="add_ln48_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_198_p2" SOURCE="real_matmul.cpp:48" URAM="0" VARIABLE="add_ln48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_230_p2" SOURCE="real_matmul.cpp:49" URAM="0" VARIABLE="add_ln49"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2</Name>
+            <Loops>
+                <LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>613</Best-caseLatency>
+                    <Average-caseLatency>613</Average-caseLatency>
+                    <Worst-caseLatency>613</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>6.130 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.130 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>6.130 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>613</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2>
+                        <Name>LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>600</TripCount>
+                        <Latency>611</Latency>
+                        <AbsoluteTimeLatency>6.110 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
                         <PipelineDepth>13</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_45_1_VITIS_LOOP_46_2>
+                    </LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -895,74 +962,10 @@
                     <DSP>0</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
-                    <FF>581</FF>
+                    <FF>282</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>807</LUT>
-                    <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>1</UTIL_LUT>
-                    <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
-                </Resources>
-            </AreaEstimates>
-            <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_46_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_1_fu_203_p2" SOURCE="real_matmul.cpp:45" URAM="0" VARIABLE="add_ln45_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_46_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_fu_212_p2" SOURCE="real_matmul.cpp:45" URAM="0" VARIABLE="add_ln45"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_46_2" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_9ns_10_1_1_U1" SOURCE="real_matmul.cpp:47" URAM="0" VARIABLE="mul_ln47"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_46_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln47_2_fu_382_p2" SOURCE="real_matmul.cpp:47" URAM="0" VARIABLE="add_ln47_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_46_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_3_fu_399_p2" SOURCE="real_matmul.cpp:48" URAM="0" VARIABLE="add_ln48_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_46_2" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_10ns_17_1_1_U2" SOURCE="real_matmul.cpp:48" URAM="0" VARIABLE="mul_ln48"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_45_1_VITIS_LOOP_46_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_300_p2" SOURCE="real_matmul.cpp:46" URAM="0" VARIABLE="add_ln46"/>
-            </BindNodes>
-        </Module>
-        <Module>
-            <Name>real_matmul_Pipeline_VITIS_LOOP_56_5</Name>
-            <Loops>
-                <VITIS_LOOP_56_5/>
-            </Loops>
-            <PerformanceEstimates>
-                <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>10.00</TargetClockPeriod>
-                    <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>5.077</EstimatedClockPeriod>
-                </SummaryOfTimingAnalysis>
-                <SummaryOfOverallLatency>
-                    <Best-caseLatency>155</Best-caseLatency>
-                    <Average-caseLatency>155</Average-caseLatency>
-                    <Worst-caseLatency>155</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>1.550 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.550 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>1.550 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>155</PipelineInitiationInterval>
-                    <PipelineType>no</PipelineType>
-                </SummaryOfOverallLatency>
-                <SummaryOfLoopLatency>
-                    <VITIS_LOOP_56_5>
-                        <Name>VITIS_LOOP_56_5</Name>
-                        <Slack>7.30</Slack>
-                        <TripCount>150</TripCount>
-                        <Latency>153</Latency>
-                        <AbsoluteTimeLatency>1.530 us</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>5</PipelineDepth>
-                        <PipelineType>yes</PipelineType>
-                        <InstanceList/>
-                    </VITIS_LOOP_56_5>
-                </SummaryOfLoopLatency>
-            </PerformanceEstimates>
-            <AreaEstimates>
-                <Resources>
-                    <DSP>1</DSP>
-                    <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>98</FF>
-                    <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>~0</UTIL_FF>
-                    <LUT>146</LUT>
+                    <LUT>418</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -974,17 +977,373 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_56_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln56_fu_124_p2" SOURCE="real_matmul.cpp:56" URAM="0" VARIABLE="add_ln56"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_56_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln57_1_fu_134_p2" SOURCE="real_matmul.cpp:57" URAM="0" VARIABLE="add_ln57_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_56_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln57_2_fu_153_p2" SOURCE="real_matmul.cpp:57" URAM="0" VARIABLE="add_ln57_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_56_5" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U11" SOURCE="real_matmul.cpp:57" URAM="0" VARIABLE="mul_ln57"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_56_5" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U11" SOURCE="real_matmul.cpp:57" URAM="0" VARIABLE="add_ln57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln55_1_fu_200_p2" SOURCE="real_matmul.cpp:55" URAM="0" VARIABLE="add_ln55_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln55_fu_242_p2" SOURCE="real_matmul.cpp:55" URAM="0" VARIABLE="add_ln55"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_10ns_17_1_1_U7" SOURCE="real_matmul.cpp:58" URAM="0" VARIABLE="mul_ln58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln56_fu_223_p2" SOURCE="real_matmul.cpp:56" URAM="0" VARIABLE="add_ln56"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>real_matmul_Pipeline_VITIS_LOOP_63_6</Name>
+            <Name>PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1</Name>
             <Loops>
-                <VITIS_LOOP_63_6/>
+                <PerformBlockMatrixCalculation_VITIS_LOOP_66_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.225</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>26</Best-caseLatency>
+                    <Average-caseLatency>26</Average-caseLatency>
+                    <Worst-caseLatency>26</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.260 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.260 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.260 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>26</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <PerformBlockMatrixCalculation_VITIS_LOOP_66_1>
+                        <Name>PerformBlockMatrixCalculation_VITIS_LOOP_66_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>16</TripCount>
+                        <Latency>24</Latency>
+                        <AbsoluteTimeLatency>0.240 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </PerformBlockMatrixCalculation_VITIS_LOOP_66_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>150</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>68</UTIL_DSP>
+                    <FF>5258</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>4</UTIL_FF>
+                    <LUT>13286</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>24</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln65_1_fu_11490_p2" SOURCE="real_matmul.cpp:65" URAM="0" VARIABLE="add_ln65_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln65_fu_11499_p2" SOURCE="real_matmul.cpp:65" URAM="0" VARIABLE="add_ln65"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_fu_14363_p2" SOURCE="real_matmul.cpp:67" URAM="0" VARIABLE="add_ln67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U530" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U444" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U445" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U531" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U446" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U532" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U594" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U448" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U533" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U449" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U534" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U450" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U535" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U451" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U536" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U595" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U453" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U537" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U454" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U538" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U455" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U539" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U456" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U540" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U596" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U458" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U541" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U459" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U542" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U597" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U461" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U543" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U462" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U544" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U598" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U464" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U545" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U465" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U546" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U466" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U547" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U467" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U548" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U599" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U469" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U549" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U470" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U550" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_47"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U600" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U472" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U551" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U473" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U552" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U601" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U475" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_54"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U553" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_55"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U476" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_56"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U554" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U477" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U555" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_59"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U478" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_60"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U556" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_61"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U602" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U480" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_63"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U557" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U481" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_65"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U558" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_66"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U603" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U483" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U559" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_69"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U484" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_70"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U560" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_71"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U604" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_72"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U486" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_73"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U561" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_74"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U487" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_75"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U562" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_76"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U488" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_77"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U563" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_78"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U489" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_79"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U564" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_80"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U605" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_81"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U491" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U565" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_83"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U492" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_84"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U566" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_85"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U493" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_86"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U567" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_87"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U494" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_88"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U568" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_89"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U606" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_90"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U496" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_91"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U569" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_92"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U497" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_93"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U570" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_94"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U498" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_95"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U571" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_96"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U499" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_97"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U572" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_98"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U607" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_99"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U501" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_100"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U573" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_101"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U502" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_102"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U574" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_103"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U608" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_104"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U504" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_105"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U575" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_106"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U505" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_107"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U576" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_108"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U609" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_109"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U507" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_110"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U577" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_111"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U508" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_112"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U578" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_113"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U509" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_114"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U579" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_115"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U510" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_116"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U580" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_117"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U610" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_118"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U512" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_119"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U581" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_120"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U513" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_121"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U582" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_122"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U611" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_123"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U515" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_124"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U583" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_125"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U516" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_126"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U584" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_127"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U612" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_128"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U518" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_129"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U585" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_130"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U519" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_131"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U586" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_132"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U520" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_133"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U587" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_134"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U521" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_135"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U588" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_136"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U613" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_137"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U523" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_138"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U589" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_139"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U524" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_140"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U590" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_141"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U614" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_142"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U526" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_143"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U591" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_144"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U527" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_145"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U592" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_146"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U615" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_147"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U529" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_148"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U593" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="mul_ln70_149"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U530" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U531" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U532" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U533" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U594" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_6_fu_17210_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U534" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U535" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U536" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U537" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U595" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_14_fu_17214_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U538" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U539" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_19_fu_17190_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U540" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U541" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U596" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_23_fu_17218_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U542" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U543" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U597" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U544" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U545" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U598" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_32_fu_17222_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U546" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U547" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U548" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U549" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U599" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_42_fu_17226_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U550" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U551" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U600" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U552" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U553" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U601" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_51_fu_17230_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U554" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_54"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U555" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_55"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_56_fu_17194_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_56"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U556" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U557" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U602" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_59"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_60_fu_17234_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_60"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U558" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U559" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_63"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U603" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U560" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_66"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U561" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U604" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_69_fu_17238_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_69"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U562" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_74"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U563" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_75"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_76_fu_17198_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_76"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U564" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_77"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U565" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_78"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U605" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_79"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_80_fu_17242_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_80"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U566" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U567" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_83"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U568" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_85"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U569" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_86"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U606" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_87"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_88_fu_17246_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_88"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U570" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_91"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U571" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_92"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_93_fu_17202_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_93"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U572" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_94"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U573" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_95"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U607" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_96"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_97_fu_17250_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_97"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U574" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_99"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U575" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_100"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U608" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_101"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U576" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_103"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U577" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_104"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U609" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_105"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_106_fu_17254_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_106"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U578" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_110"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U579" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_111"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U580" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_113"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U581" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_114"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U610" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_115"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_116_fu_17258_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_116"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U582" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_118"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U583" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_119"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U611" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_120"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U584" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_122"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U585" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_123"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U612" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_124"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_125_fu_17262_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_125"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U586" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_128"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U587" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_129"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_130_fu_17206_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_130"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U588" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_131"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U589" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_132"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U613" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_133"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_134_fu_17266_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_134"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U590" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_136"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U591" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_137"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U614" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_138"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U592" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_140"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U593" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_141"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U615" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_142"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_143_fu_17270_p2" SOURCE="real_matmul.cpp:70" URAM="0" VARIABLE="add_ln70_143"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PerformBlockMatrixCalculation_VITIS_LOOP_66_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln66_fu_16165_p2" SOURCE="real_matmul.cpp:66" URAM="0" VARIABLE="add_ln66"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>PerformMatrixCalculation</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.936</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>102</Best-caseLatency>
+                    <Average-caseLatency>102</Average-caseLatency>
+                    <Worst-caseLatency>102</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.020 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.020 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.020 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>102</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>150</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>68</UTIL_DSP>
+                    <FF>24536</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>23</UTIL_FF>
+                    <LUT>19575</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>36</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>real_matmul_Pipeline_VITIS_LOOP_78_1</Name>
+            <Loops>
+                <LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -993,27 +1352,27 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>13</Best-caseLatency>
-                    <Average-caseLatency>13</Average-caseLatency>
-                    <Worst-caseLatency>13</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>13</PipelineInitiationInterval>
+                    <Best-caseLatency>26</Best-caseLatency>
+                    <Average-caseLatency>26</Average-caseLatency>
+                    <Worst-caseLatency>26</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.260 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.260 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.260 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>26</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_63_6>
-                        <Name>VITIS_LOOP_63_6</Name>
+                    <LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1>
+                        <Name>LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>2</TripCount>
-                        <Latency>11</Latency>
-                        <AbsoluteTimeLatency>0.110 us</AbsoluteTimeLatency>
-                        <PipelineII>2</PipelineII>
+                        <TripCount>16</TripCount>
+                        <Latency>24</Latency>
+                        <AbsoluteTimeLatency>0.240 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
                         <PipelineDepth>10</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_63_6>
+                    </LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1021,10 +1380,10 @@
                     <DSP>0</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
-                    <FF>193</FF>
+                    <FF>332</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>366</LUT>
+                    <LUT>476</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1036,17 +1395,18 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln63_fu_184_p2" SOURCE="real_matmul.cpp:63" URAM="0" VARIABLE="add_ln63"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_6" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_168_p2" SOURCE="real_matmul.cpp:66" URAM="0" VARIABLE="empty"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_63_6" OPTYPE="mul" PRAGMA="" RTLNAME="mul_7ns_10ns_16_1_1_U18" SOURCE="real_matmul.cpp:66" URAM="0" VARIABLE="empty_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln77_4_fu_188_p2" SOURCE="real_matmul.cpp:77" URAM="0" VARIABLE="add_ln77_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln77_fu_200_p2" SOURCE="real_matmul.cpp:77" URAM="0" VARIABLE="add_ln77"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln77_1_fu_286_p2" SOURCE="real_matmul.cpp:77" URAM="0" VARIABLE="add_ln77_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_7ns_10ns_16_1_1_U1829" SOURCE="real_matmul.cpp:77" URAM="0" VARIABLE="mul_ln77"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln80_fu_250_p2" SOURCE="real_matmul.cpp:80" URAM="0" VARIABLE="add_ln80"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln78_fu_256_p2" SOURCE="real_matmul.cpp:78" URAM="0" VARIABLE="add_ln78"/>
             </BindNodes>
         </Module>
         <Module>
             <Name>real_matmul</Name>
             <Loops>
-                <VITIS_LOOP_27_1>
-                    <VITIS_LOOP_53_3_VITIS_LOOP_54_4/>
-                </VITIS_LOOP_27_1>
+                <CallBlockMatmul/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1055,78 +1415,70 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>6350001</Best-caseLatency>
-                    <Average-caseLatency>6350001</Average-caseLatency>
-                    <Worst-caseLatency>6350001</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>63.500 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>63.500 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>63.500 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>6350002</PipelineInitiationInterval>
+                    <Best-caseLatency>1702501</Best-caseLatency>
+                    <Average-caseLatency>1702501</Average-caseLatency>
+                    <Worst-caseLatency>1702501</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>17.025 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>17.025 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>17.025 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1702502</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_27_1>
-                        <Name>VITIS_LOOP_27_1</Name>
+                    <CallBlockMatmul>
+                        <Name>CallBlockMatmul</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>5000</TripCount>
-                        <Latency>6350000</Latency>
-                        <AbsoluteTimeLatency>63.500 ms</AbsoluteTimeLatency>
-                        <IterationLatency>1270</IterationLatency>
-                        <PipelineDepth>1270</PipelineDepth>
+                        <TripCount>1250</TripCount>
+                        <Latency>1702500</Latency>
+                        <AbsoluteTimeLatency>17.025 ms</AbsoluteTimeLatency>
+                        <IterationLatency>1362</IterationLatency>
+                        <PipelineDepth>1362</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210</Instance>
-                            <Instance>grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230</Instance>
+                            <Instance>grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179</Instance>
+                            <Instance>grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190</Instance>
+                            <Instance>grp_PerformMatrixCalculation_fu_202</Instance>
+                            <Instance>grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215</Instance>
                         </InstanceList>
-                        <VITIS_LOOP_53_3_VITIS_LOOP_54_4>
-                            <Name>VITIS_LOOP_53_3_VITIS_LOOP_54_4</Name>
-                            <Slack>7.30</Slack>
-                            <TripCount>4</TripCount>
-                            <Latency>636</Latency>
-                            <AbsoluteTimeLatency>6.360 us</AbsoluteTimeLatency>
-                            <IterationLatency>159</IterationLatency>
-                            <PipelineDepth>159</PipelineDepth>
-                            <PipelineType>no</PipelineType>
-                            <InstanceList>
-                                <Instance>grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221</Instance>
-                            </InstanceList>
-                        </VITIS_LOOP_53_3_VITIS_LOOP_54_4>
-                    </VITIS_LOOP_27_1>
+                    </CallBlockMatmul>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>4</BRAM_18K>
+                    <BRAM_18K>10</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>1</UTIL_BRAM>
-                    <DSP>2</DSP>
+                    <UTIL_BRAM>3</UTIL_BRAM>
+                    <DSP>151</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>2575</FF>
+                    <UTIL_DSP>68</UTIL_DSP>
+                    <FF>26707</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>2</UTIL_FF>
-                    <LUT>3286</LUT>
+                    <UTIL_FF>25</UTIL_FF>
+                    <LUT>22737</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>6</UTIL_LUT>
+                    <UTIL_LUT>42</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="MatA_BRAM_U" SOURCE="real_matmul.cpp:38" URAM="0" VARIABLE="MatA_BRAM"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="MatB_BRAM_U" SOURCE="real_matmul.cpp:39" URAM="0" VARIABLE="MatB_BRAM"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_fu_283_p2" SOURCE="real_matmul.cpp:27" URAM="0" VARIABLE="add_ln27"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="counter_2_fu_295_p2" SOURCE="real_matmul.cpp:27" URAM="0" VARIABLE="counter_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_7ns_10ns_16_1_1_U28" SOURCE="real_matmul.cpp:33" URAM="0" VARIABLE="mul_ln33"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_332_p2" SOURCE="real_matmul.cpp:33" URAM="0" VARIABLE="add_ln33"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_53_3_VITIS_LOOP_54_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_1_fu_362_p2" SOURCE="real_matmul.cpp:53" URAM="0" VARIABLE="add_ln53_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_53_3_VITIS_LOOP_54_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_368_p2" SOURCE="real_matmul.cpp:53" URAM="0" VARIABLE="add_ln53"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_53_3_VITIS_LOOP_54_4" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2ns_9ns_9_1_1_U29" SOURCE="real_matmul.cpp:53" URAM="0" VARIABLE="mul_ln53"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_53_3_VITIS_LOOP_54_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_fu_447_p2" SOURCE="real_matmul.cpp:54" URAM="0" VARIABLE="add_ln54"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_27_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_6ns_9s_14ns_15_4_1_U30" SOURCE="real_matmul.cpp:33" URAM="0" VARIABLE="mul_ln33_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_6ns_9s_14ns_15_4_1_U30" SOURCE="real_matmul.cpp:33" URAM="0" VARIABLE="add_ln33_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_2_fu_402_p2" SOURCE="real_matmul.cpp:27" URAM="0" VARIABLE="add_ln27_2"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="MatA_BRAM_U" SOURCE="real_matmul.cpp:30" URAM="0" VARIABLE="MatA_BRAM"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="MatA_BRAM_1_U" SOURCE="real_matmul.cpp:30" URAM="0" VARIABLE="MatA_BRAM_1"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="MatA_BRAM_2_U" SOURCE="real_matmul.cpp:30" URAM="0" VARIABLE="MatA_BRAM_2"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="MatA_BRAM_3_U" SOURCE="real_matmul.cpp:30" URAM="0" VARIABLE="MatA_BRAM_3"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="MatB_BRAM_U" SOURCE="real_matmul.cpp:31" URAM="0" VARIABLE="MatB_BRAM"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="MatB_BRAM_1_U" SOURCE="real_matmul.cpp:31" URAM="0" VARIABLE="MatB_BRAM_1"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="MatB_BRAM_2_U" SOURCE="real_matmul.cpp:31" URAM="0" VARIABLE="MatB_BRAM_2"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="MatB_BRAM_3_U" SOURCE="real_matmul.cpp:31" URAM="0" VARIABLE="MatB_BRAM_3"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="MatC_BRAM_U" SOURCE="" URAM="0" VARIABLE="MatC_BRAM"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CallBlockMatmul" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_fu_246_p2" SOURCE="real_matmul.cpp:29" URAM="0" VARIABLE="add_ln29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CallBlockMatmul" OPTYPE="add" PRAGMA="" RTLNAME="counter_2_fu_258_p2" SOURCE="real_matmul.cpp:29" URAM="0" VARIABLE="counter_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="CallBlockMatmul" OPTYPE="mul" PRAGMA="" RTLNAME="mul_7ns_10ns_16_1_1_U1836" SOURCE="real_matmul.cpp:30" URAM="0" VARIABLE="mul_ln30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CallBlockMatmul" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_309_p2" SOURCE="real_matmul.cpp:30" URAM="0" VARIABLE="add_ln30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="CallBlockMatmul" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_5ns_9s_13ns_14_4_1_U1837" SOURCE="real_matmul.cpp:30" URAM="0" VARIABLE="mul_ln30_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="CallBlockMatmul" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_5ns_9s_13ns_14_4_1_U1837" SOURCE="real_matmul.cpp:30" URAM="0" VARIABLE="add_ln30_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="CallBlockMatmul" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_2_fu_353_p2" SOURCE="real_matmul.cpp:29" URAM="0" VARIABLE="add_ln29_2"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -1422,29 +1774,35 @@
             <item name="Inferred Burst Summary">
                 <table>
                     <keys size="6">HW Interface, Direction, Length, Width, Loop, Loop Location</keys>
-                    <column name="m_axi_mem">write, 2, 16, VITIS_LOOP_64_7, real_matmul.cpp:64:20</column>
+                    <column name="m_axi_mem">read, 600, 16, LoadMatAFromDRAMtoBRAM, real_matmul.cpp:48:26</column>
+                    <column name="m_axi_mem">write, 4, 16, VITIS_LOOP_78_1, real_matmul.cpp:78:20</column>
                 </table>
             </item>
             <item name="All M_AXI Variable Accesses">
                 <table>
                     <keys size="10">HW Interface, Variable, Access Location, Direction, Burst Status, Length, Loop, Loop Location, Resolution, Problem</keys>
-                    <column name="m_axi_mem">, real_matmul.cpp:45:19, read, Fail, , , , 214-224, Could not burst due to multiple potential reads to the same bundle in the same region.</column>
-                    <column name="m_axi_mem">MatA_DRAM, real_matmul.cpp:47:20, read, Widen Fail, , VITIS_LOOP_46_2, real_matmul.cpp:46:20, 214-353, Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
-                    <column name="m_axi_mem">MatA_DRAM, real_matmul.cpp:47:20, read, Fail, , VITIS_LOOP_27_1, real_matmul.cpp:27:19, 214-229, Could not analyze pattern</column>
-                    <column name="m_axi_mem">MatA_DRAM, real_matmul.cpp:47:20, read, Inferred, 300, VITIS_LOOP_45_1, real_matmul.cpp:45:19, , </column>
-                    <column name="m_axi_mem">MatB_DRAM, real_matmul.cpp:48:20, read, Fail, , VITIS_LOOP_46_2, real_matmul.cpp:46:20, 214-230, Stride is incompatible</column>
-                    <column name="m_axi_mem">MatC_DRAM, real_matmul.cpp:66:76, write, Widen Fail, , VITIS_LOOP_64_7, real_matmul.cpp:64:20, 214-353, Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
-                    <column name="m_axi_mem">MatC_DRAM, real_matmul.cpp:66:76, write, Fail, , VITIS_LOOP_63_6, real_matmul.cpp:63:19, 214-230, Stride is incompatible</column>
-                    <column name="m_axi_mem">MatC_DRAM, real_matmul.cpp:66:76, write, Inferred, 2, VITIS_LOOP_64_7, real_matmul.cpp:64:20, , </column>
+                    <column name="m_axi_mem">MatA_DRAM, real_matmul.cpp:51:18, read, Widen Fail, , VITIS_LOOP_49_1, real_matmul.cpp:49:20, 214-353, Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_mem">MatA_DRAM, real_matmul.cpp:51:18, read, Fail, , CallBlockMatmul, real_matmul.cpp:29:19, 214-229, Could not analyze pattern</column>
+                    <column name="m_axi_mem">MatA_DRAM, real_matmul.cpp:51:18, read, Inferred, 600, LoadMatAFromDRAMtoBRAM, real_matmul.cpp:48:26, , </column>
+                    <column name="m_axi_mem">MatB_DRAM, real_matmul.cpp:58:18, read, Fail, , VITIS_LOOP_56_2, real_matmul.cpp:56:20, 214-230, Stride is incompatible</column>
+                    <column name="m_axi_mem">MatC_DRAM, real_matmul.cpp:80:74, write, Widen Fail, , VITIS_LOOP_78_1, real_matmul.cpp:78:20, 214-353, Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_mem">MatC_DRAM, real_matmul.cpp:80:74, write, Fail, , LoadArraysFromBRAMtoDRAM, real_matmul.cpp:77:28, 214-230, Stride is incompatible</column>
+                    <column name="m_axi_mem">MatC_DRAM, real_matmul.cpp:80:74, write, Inferred, 4, VITIS_LOOP_78_1, real_matmul.cpp:78:20, , </column>
                 </table>
             </item>
         </section>
     </ReportBurst>
     <PragmaReport>
-        <Pragma type="interface" location="real_matmul.cpp:21" status="valid" parentFunction="real_matmul" variable="MatA_DRAM" isDirective="0" options="m_axi depth=1 port=MatA_DRAM offset=slave bundle=mem"/>
-        <Pragma type="interface" location="real_matmul.cpp:22" status="valid" parentFunction="real_matmul" variable="MatB_DRAM" isDirective="0" options="m_axi depth=1 port=MatB_DRAM offset=slave bundle=mem"/>
-        <Pragma type="interface" location="real_matmul.cpp:23" status="valid" parentFunction="real_matmul" variable="MatC_DRAM" isDirective="0" options="m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem"/>
-        <Pragma type="interface" location="real_matmul.cpp:25" status="valid" parentFunction="real_matmul" variable="return" isDirective="0" options="s_axilite port=return"/>
+        <Pragma type="interface" location="real_matmul.cpp:24" status="valid" parentFunction="real_matmul" variable="MatA_DRAM" isDirective="0" options="m_axi depth=1 port=MatA_DRAM offset=slave bundle=mem"/>
+        <Pragma type="interface" location="real_matmul.cpp:25" status="valid" parentFunction="real_matmul" variable="MatB_DRAM" isDirective="0" options="m_axi depth=1 port=MatB_DRAM offset=slave bundle=mem"/>
+        <Pragma type="interface" location="real_matmul.cpp:26" status="valid" parentFunction="real_matmul" variable="MatC_DRAM" isDirective="0" options="m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem"/>
+        <Pragma type="interface" location="real_matmul.cpp:28" status="valid" parentFunction="real_matmul" variable="return" isDirective="0" options="s_axilite port=return"/>
+        <Pragma type="array_partition" location="real_matmul.cpp:36" status="valid" parentFunction="real_matmul" variable="MatA_BRAM" isDirective="0" options="variable=MatA_BRAM block factor=25 dim=1"/>
+        <Pragma type="array_partition" location="real_matmul.cpp:37" status="valid" parentFunction="real_matmul" variable="MatB_BRAM" isDirective="0" options="variable=MatB_BRAM block factor=50 dim=2"/>
+        <Pragma type="pipeline" location="real_matmul.cpp:50" status="valid" parentFunction="loadmatricesfromdramtobram" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="real_matmul.cpp:57" status="valid" parentFunction="loadmatricesfromdramtobram" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="real_matmul.cpp:68" status="valid" parentFunction="performmatrixcalculation" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="real_matmul.cpp:79" status="valid" parentFunction="loadmatricesfrombramtodram" variable="" isDirective="0" options="II=1"/>
     </PragmaReport>
 </profile>
 

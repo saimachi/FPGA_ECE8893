@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'real_matmul'" level="0">
-<item name = "Date">Thu Feb  1 06:40:21 2024
+<item name = "Date">Mon Feb  5 22:57:02 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">real_proj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">6350001, 6350001, 63.500 ms, 63.500 ms, 6350002, 6350002, no</column>
+<column name="">1702501, 1702501, 17.025 ms, 17.025 ms, 1702502, 1702502, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_27_1">6350000, 6350000, 1270, -, -, 5000, no</column>
-<column name=" + VITIS_LOOP_53_3_VITIS_LOOP_54_4">636, 636, 159, -, -, 4, no</column>
+<column name="- CallBlockMatmul">1702500, 1702500, 1362, -, -, 1250, no</column>
 </table>
 </item>
 </section>

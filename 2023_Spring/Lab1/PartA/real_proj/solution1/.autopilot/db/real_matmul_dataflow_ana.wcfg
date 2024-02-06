@@ -37,53 +37,85 @@
          <obj_property name="Render_Data">/apatb_real_matmul_top/AESL_inst_real_matmul//AESL_inst_real_matmul_activity.dataflowTxWaveData.Cycles</obj_property>
          <obj_property name="Value_Data">/apatb_real_matmul_top/AESL_inst_real_matmul//AESL_inst_real_matmul_activity.dataflowTxWaveData.OutStanding</obj_property>
          <obj_property name="Detail_Data">/apatb_real_matmul_top/AESL_inst_real_matmul//AESL_inst_real_matmul_activity.dataflowTxTooltipData</obj_property>
-         <wvobject type="group" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity">
-            <obj_property name="label">grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity">
+            <obj_property name="label">grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity</obj_property>
+            <obj_property name="ElementShortName">grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity">
-            <obj_property name="label">grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity">
+            <obj_property name="label">grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity</obj_property>
+            <obj_property name="ElementShortName">grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity">
-            <obj_property name="label">grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_fu_202_activity">
+            <obj_property name="label">grp_PerformMatrixCalculation_fu_202_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity</obj_property>
+            <obj_property name="ElementShortName">grp_PerformMatrixCalculation_fu_202_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_PerformMatrixCalculation_fu_202_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_fu_202_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_fu_202_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_fu_202_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity">
+               <obj_property name="label">grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity">
+            <obj_property name="label">grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>
@@ -94,17 +126,21 @@
    <wvobject type="group" fp_name="AESL_inst_real_matmul_group">
       <obj_property name="label">AESL_inst_real_matmul</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="protoinst" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity">
-         <obj_property name="ElementShortName">grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity">
+         <obj_property name="ElementShortName">grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity">
-         <obj_property name="ElementShortName">grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity">
+         <obj_property name="ElementShortName">grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity">
-         <obj_property name="ElementShortName">grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_fu_202_activity">
+         <obj_property name="ElementShortName">grp_PerformMatrixCalculation_fu_202_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_PerformMatrixCalculation_fu_202_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity">
+         <obj_property name="ElementShortName">grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_activity</obj_property>
       </wvobject>
       <wvobject type="group" fp_name="AESL_inst_real_matmul_Handshake_group">
          <obj_property name="label">Block-level handshake</obj_property>
@@ -122,61 +158,105 @@
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_group">
-         <obj_property name="label">grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210</obj_property>
+      <wvobject type="group" fp_name="grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_group">
+         <obj_property name="label">grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210_Handshake_group">
+         <wvobject type="group" fp_name="grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210/ap_start">
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_210/ap_done">
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1_fu_179/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_group">
-         <obj_property name="label">grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221</obj_property>
+      <wvobject type="group" fp_name="grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_group">
+         <obj_property name="label">grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221_Handshake_group">
+         <wvobject type="group" fp_name="grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221/ap_start">
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_56_5_fu_221/ap_done">
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2_fu_190/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_group">
-         <obj_property name="label">grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230</obj_property>
+      <wvobject type="group" fp_name="grp_PerformMatrixCalculation_fu_202_group">
+         <obj_property name="label">grp_PerformMatrixCalculation_fu_202</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230_Handshake_group">
+         <wvobject type="protoinst" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity">
+            <obj_property name="ElementShortName">grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_PerformMatrixCalculation_fu_202_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230/ap_start">
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_63_6_fu_230/ap_done">
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_group">
+            <obj_property name="label">grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_PerformMatrixCalculation_fu_202/grp_PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1_fu_11192/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_group">
+         <obj_property name="label">grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_real_matmul_top/AESL_inst_real_matmul/grp_real_matmul_Pipeline_VITIS_LOOP_78_1_fu_215/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>

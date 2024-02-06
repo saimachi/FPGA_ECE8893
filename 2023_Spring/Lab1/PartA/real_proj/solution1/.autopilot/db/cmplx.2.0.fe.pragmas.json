@@ -1,26 +1,56 @@
 {
   "0": {
     "basicblocks": 5,
-    "calls": "1",
+    "calls": "2 3 1",
     "file": "real_matmul.cpp",
-    "fileloc": 16,
-    "instructions": 13,
+    "fileloc": 19,
+    "instructions": 38,
     "name": "real_matmul",
-    "total_instructions": 131
+    "total_instructions": 1785
   },
   "1": {
-    "basicblocks": 23,
+    "basicblocks": 7,
     "calls": "",
     "file": "real_matmul.cpp",
-    "fileloc": 32,
-    "instructions": 118,
+    "fileloc": 76,
+    "instructions": 27,
     "loads": {
-      "L": 6
+      "L": 1
     },
-    "name": "block_matmul",
+    "name": "LoadMatricesFromBRAMToDRAM",
     "stores": {
-      "L": 5
+      "L": 1
     },
-    "total_instructions": 118
+    "total_instructions": 27
+  },
+  "2": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "real_matmul.cpp",
+    "fileloc": 44,
+    "instructions": 45,
+    "loads": {
+      "L": 2
+    },
+    "name": "LoadMatricesFromDRAMToBRAM",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 45
+  },
+  "3": {
+    "basicblocks": 8,
+    "calls": "",
+    "file": "real_matmul.cpp",
+    "fileloc": 63,
+    "instructions": 1675,
+    "loads": {
+      "L": 301
+    },
+    "name": "PerformMatrixCalculation",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 1675
   }
 }

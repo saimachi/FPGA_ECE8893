@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'real_matmul'
 ================================================================
 + General Information: 
-    * Date:           Thu Feb  1 06:40:23 2024
+    * Date:           Mon Feb  5 22:57:15 2024
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        real_proj
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,20 +15,22 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +----------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+-----------+-----+
-    |                          Modules                         | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |        |         |           |           |     |
-    |                          & Loops                         | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP   |     FF    |    LUT    | URAM|
-    +----------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+-----------+-----+
-    |+ real_matmul                                             |     -|  0.00|  6350001|  6.350e+07|         -|  6350002|     -|        no|  4 (1%)|  2 (~0%)|  2575 (2%)|  3286 (6%)|    -|
-    | o VITIS_LOOP_27_1                                        |     -|  7.30|  6350000|  6.350e+07|      1270|        -|  5000|        no|       -|        -|          -|          -|    -|
-    |  + real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2  |     -|  0.00|      612|  6.120e+03|         -|      612|     -|        no|       -|        -|  581 (~0%)|   807 (1%)|    -|
-    |   o VITIS_LOOP_45_1_VITIS_LOOP_46_2                      |    II|  7.30|      610|  6.100e+03|        13|        2|   300|       yes|       -|        -|          -|          -|    -|
-    |  + real_matmul_Pipeline_VITIS_LOOP_63_6                  |     -|  0.00|       13|    130.000|         -|       13|     -|        no|       -|        -|  193 (~0%)|  366 (~0%)|    -|
-    |   o VITIS_LOOP_63_6                                      |    II|  7.30|       11|    110.000|        10|        2|     2|       yes|       -|        -|          -|          -|    -|
-    |  o VITIS_LOOP_53_3_VITIS_LOOP_54_4                       |     -|  7.30|      636|  6.360e+03|       159|        -|     4|        no|       -|        -|          -|          -|    -|
-    |   + real_matmul_Pipeline_VITIS_LOOP_56_5                 |     -|  2.22|      155|  1.550e+03|         -|      155|     -|        no|       -|  1 (~0%)|   98 (~0%)|  146 (~0%)|    -|
-    |    o VITIS_LOOP_56_5                                     |     -|  7.30|      153|  1.530e+03|         5|        1|   150|       yes|       -|        -|          -|          -|    -|
-    +----------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+-----------+-----+
+    +--------------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+-----------+-------------+-------------+-----+
+    |                                        Modules                                       | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |           |             |             |     |
+    |                                        & Loops                                       | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP    |      FF     |     LUT     | URAM|
+    +--------------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+-----------+-------------+-------------+-----+
+    |+ real_matmul                                                                         |     -|  0.00|  1702501|  1.703e+07|         -|  1702502|     -|        no|  10 (3%)|  151 (68%)|  26707 (25%)|  22737 (42%)|    -|
+    | o CallBlockMatmul                                                                    |     -|  7.30|  1702500|  1.702e+07|      1362|        -|  1250|        no|        -|          -|            -|            -|    -|
+    |  + real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1                       |     -|  0.00|      603|  6.030e+03|         -|      603|     -|        no|        -|          -|     52 (~0%)|    145 (~0%)|    -|
+    |   o LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1                                           |     -|  7.30|      601|  6.010e+03|         3|        1|   600|       yes|        -|          -|            -|            -|    -|
+    |  + real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2                       |     -|  0.00|      613|  6.130e+03|         -|      613|     -|        no|        -|          -|    282 (~0%)|    418 (~0%)|    -|
+    |   o LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2                                           |     -|  7.30|      611|  6.110e+03|        13|        1|   600|       yes|        -|          -|            -|            -|    -|
+    |  + PerformMatrixCalculation                                                          |     -|  0.36|      102|  1.020e+03|         -|      102|     -|        no|        -|  150 (68%)|  24536 (23%)|  19575 (36%)|    -|
+    |   + PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1  |     -|  1.08|       26|    260.000|         -|       26|     -|        no|        -|  150 (68%)|    5258 (4%)|  13286 (24%)|    -|
+    |    o PerformBlockMatrixCalculation_VITIS_LOOP_66_1                                   |     -|  7.30|       24|    240.000|        10|        1|    16|       yes|        -|          -|            -|            -|    -|
+    |  + real_matmul_Pipeline_VITIS_LOOP_78_1                                              |     -|  0.00|       26|    260.000|         -|       26|     -|        no|        -|          -|    332 (~0%)|    476 (~0%)|    -|
+    |   o LoadArraysFromBRAMtoDRAM_VITIS_LOOP_78_1                                         |     -|  7.30|       24|    240.000|        10|        1|    16|       yes|        -|          -|            -|            -|    -|
+    +--------------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+-----------+-------------+-------------+-----+
 
 
 ================================================================
@@ -110,90 +112,360 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+--------------+-----------+--------+-------+-----------------+-----------------------+
-| HW Interface | Direction | Length | Width | Loop            | Loop Location         |
-+--------------+-----------+--------+-------+-----------------+-----------------------+
-| m_axi_mem    | write     | 2      | 16    | VITIS_LOOP_64_7 | real_matmul.cpp:64:20 |
-+--------------+-----------+--------+-------+-----------------+-----------------------+
++--------------+-----------+--------+-------+------------------------+-----------------------+
+| HW Interface | Direction | Length | Width | Loop                   | Loop Location         |
++--------------+-----------+--------+-------+------------------------+-----------------------+
+| m_axi_mem    | read      | 600    | 16    | LoadMatAFromDRAMtoBRAM | real_matmul.cpp:48:26 |
+| m_axi_mem    | write     | 4      | 16    | VITIS_LOOP_78_1        | real_matmul.cpp:78:20 |
++--------------+-----------+--------+-------+------------------------+-----------------------+
 
 * All M_AXI Variable Accesses
-+--------------+-----------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
-| HW Interface | Variable  | Access Location       | Direction | Burst Status | Length | Loop            | Loop Location         | Resolution | Problem                                                                                               |
-+--------------+-----------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
-| m_axi_mem    |           | real_matmul.cpp:45:19 | read      | Fail         |        |                 |                       | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                |
-| m_axi_mem    | MatA_DRAM | real_matmul.cpp:47:20 | read      | Widen Fail   |        | VITIS_LOOP_46_2 | real_matmul.cpp:46:20 | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_mem    | MatA_DRAM | real_matmul.cpp:47:20 | read      | Fail         |        | VITIS_LOOP_27_1 | real_matmul.cpp:27:19 | 214-229    | Could not analyze pattern                                                                             |
-| m_axi_mem    | MatA_DRAM | real_matmul.cpp:47:20 | read      | Inferred     | 300    | VITIS_LOOP_45_1 | real_matmul.cpp:45:19 |            |                                                                                                       |
-| m_axi_mem    | MatB_DRAM | real_matmul.cpp:48:20 | read      | Fail         |        | VITIS_LOOP_46_2 | real_matmul.cpp:46:20 | 214-230    | Stride is incompatible                                                                                |
-| m_axi_mem    | MatC_DRAM | real_matmul.cpp:66:76 | write     | Widen Fail   |        | VITIS_LOOP_64_7 | real_matmul.cpp:64:20 | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_mem    | MatC_DRAM | real_matmul.cpp:66:76 | write     | Fail         |        | VITIS_LOOP_63_6 | real_matmul.cpp:63:19 | 214-230    | Stride is incompatible                                                                                |
-| m_axi_mem    | MatC_DRAM | real_matmul.cpp:66:76 | write     | Inferred     | 2      | VITIS_LOOP_64_7 | real_matmul.cpp:64:20 |            |                                                                                                       |
-+--------------+-----------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
++--------------+-----------+-----------------------+-----------+--------------+--------+--------------------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable  | Access Location       | Direction | Burst Status | Length | Loop                     | Loop Location         | Resolution | Problem                                                                                               |
++--------------+-----------+-----------------------+-----------+--------------+--------+--------------------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_mem    | MatA_DRAM | real_matmul.cpp:51:18 | read      | Widen Fail   |        | VITIS_LOOP_49_1          | real_matmul.cpp:49:20 | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_mem    | MatA_DRAM | real_matmul.cpp:51:18 | read      | Fail         |        | CallBlockMatmul          | real_matmul.cpp:29:19 | 214-229    | Could not analyze pattern                                                                             |
+| m_axi_mem    | MatA_DRAM | real_matmul.cpp:51:18 | read      | Inferred     | 600    | LoadMatAFromDRAMtoBRAM   | real_matmul.cpp:48:26 |            |                                                                                                       |
+| m_axi_mem    | MatB_DRAM | real_matmul.cpp:58:18 | read      | Fail         |        | VITIS_LOOP_56_2          | real_matmul.cpp:56:20 | 214-230    | Stride is incompatible                                                                                |
+| m_axi_mem    | MatC_DRAM | real_matmul.cpp:80:74 | write     | Widen Fail   |        | VITIS_LOOP_78_1          | real_matmul.cpp:78:20 | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_mem    | MatC_DRAM | real_matmul.cpp:80:74 | write     | Fail         |        | LoadArraysFromBRAMtoDRAM | real_matmul.cpp:77:28 | 214-230    | Stride is incompatible                                                                                |
+| m_axi_mem    | MatC_DRAM | real_matmul.cpp:80:74 | write     | Inferred     | 4      | VITIS_LOOP_78_1          | real_matmul.cpp:78:20 |            |                                                                                                       |
++--------------+-----------+-----------------------+-----------+--------------+--------+--------------------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+---------------------------------------------------------+-----+--------+------------+-----+--------+---------+
-| Name                                                    | DSP | Pragma | Variable   | Op  | Impl   | Latency |
-+---------------------------------------------------------+-----+--------+------------+-----+--------+---------+
-| + real_matmul                                           | 2   |        |            |     |        |         |
-|   add_ln27_fu_283_p2                                    | -   |        | add_ln27   | add | fabric | 0       |
-|   counter_2_fu_295_p2                                   | -   |        | counter_2  | add | fabric | 0       |
-|   mul_7ns_10ns_16_1_1_U28                               | -   |        | mul_ln33   | mul | auto   | 0       |
-|   add_ln33_fu_332_p2                                    | -   |        | add_ln33   | add | fabric | 0       |
-|   add_ln53_1_fu_362_p2                                  | -   |        | add_ln53_1 | add | fabric | 0       |
-|   add_ln53_fu_368_p2                                    | -   |        | add_ln53   | add | fabric | 0       |
-|   mul_2ns_9ns_9_1_1_U29                                 | -   |        | mul_ln53   | mul | auto   | 0       |
-|   add_ln54_fu_447_p2                                    | -   |        | add_ln54   | add | fabric | 0       |
-|   mac_muladd_6ns_9s_14ns_15_4_1_U30                     | 1   |        | mul_ln33_1 | mul | dsp48  | 3       |
-|   mac_muladd_6ns_9s_14ns_15_4_1_U30                     | 1   |        | add_ln33_1 | add | dsp48  | 3       |
-|   add_ln27_2_fu_402_p2                                  | -   |        | add_ln27_2 | add | fabric | 0       |
-|  + real_matmul_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2 | 0   |        |            |     |        |         |
-|    add_ln45_1_fu_203_p2                                 | -   |        | add_ln45_1 | add | fabric | 0       |
-|    add_ln45_fu_212_p2                                   | -   |        | add_ln45   | add | fabric | 0       |
-|    mul_2ns_9ns_10_1_1_U1                                | -   |        | mul_ln47   | mul | auto   | 0       |
-|    add_ln47_2_fu_382_p2                                 | -   |        | add_ln47_2 | add | fabric | 0       |
-|    add_ln48_3_fu_399_p2                                 | -   |        | add_ln48_3 | add | fabric | 0       |
-|    mul_8ns_10ns_17_1_1_U2                               | -   |        | mul_ln48   | mul | auto   | 0       |
-|    add_ln46_fu_300_p2                                   | -   |        | add_ln46   | add | fabric | 0       |
-|  + real_matmul_Pipeline_VITIS_LOOP_56_5                 | 1   |        |            |     |        |         |
-|    add_ln56_fu_124_p2                                   | -   |        | add_ln56   | add | fabric | 0       |
-|    add_ln57_1_fu_134_p2                                 | -   |        | add_ln57_1 | add | fabric | 0       |
-|    add_ln57_2_fu_153_p2                                 | -   |        | add_ln57_2 | add | fabric | 0       |
-|    mac_muladd_16s_16s_16ns_16_4_1_U11                   | 1   |        | mul_ln57   | mul | dsp48  | 3       |
-|    mac_muladd_16s_16s_16ns_16_4_1_U11                   | 1   |        | add_ln57   | add | dsp48  | 3       |
-|  + real_matmul_Pipeline_VITIS_LOOP_63_6                 | 0   |        |            |     |        |         |
-|    add_ln63_fu_184_p2                                   | -   |        | add_ln63   | add | fabric | 0       |
-|    empty_fu_168_p2                                      | -   |        | empty      | add | fabric | 0       |
-|    mul_7ns_10ns_16_1_1_U18                              | -   |        | empty_23   | mul | auto   | 0       |
-+---------------------------------------------------------+-----+--------+------------+-----+--------+---------+
++-------------------------------------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                                                                                | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++-------------------------------------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| + real_matmul                                                                       | 151 |        |              |     |        |         |
+|   add_ln29_fu_246_p2                                                                | -   |        | add_ln29     | add | fabric | 0       |
+|   counter_2_fu_258_p2                                                               | -   |        | counter_2    | add | fabric | 0       |
+|   mul_7ns_10ns_16_1_1_U1836                                                         | -   |        | mul_ln30     | mul | auto   | 0       |
+|   add_ln30_fu_309_p2                                                                | -   |        | add_ln30     | add | fabric | 0       |
+|   mac_muladd_5ns_9s_13ns_14_4_1_U1837                                               | 1   |        | mul_ln30_1   | mul | dsp48  | 3       |
+|   mac_muladd_5ns_9s_13ns_14_4_1_U1837                                               | 1   |        | add_ln30_1   | add | dsp48  | 3       |
+|   add_ln29_2_fu_353_p2                                                              | -   |        | add_ln29_2   | add | fabric | 0       |
+|  + real_matmul_Pipeline_LoadMatAFromDRAMtoBRAM_VITIS_LOOP_49_1                      | 0   |        |              |     |        |         |
+|    add_ln48_1_fu_181_p2                                                             | -   |        | add_ln48_1   | add | fabric | 0       |
+|    add_ln48_fu_198_p2                                                               | -   |        | add_ln48     | add | fabric | 0       |
+|    add_ln49_fu_230_p2                                                               | -   |        | add_ln49     | add | fabric | 0       |
+|  + real_matmul_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_56_2                      | 0   |        |              |     |        |         |
+|    add_ln55_1_fu_200_p2                                                             | -   |        | add_ln55_1   | add | fabric | 0       |
+|    add_ln55_fu_242_p2                                                               | -   |        | add_ln55     | add | fabric | 0       |
+|    mul_8ns_10ns_17_1_1_U7                                                           | -   |        | mul_ln58     | mul | auto   | 0       |
+|    add_ln56_fu_223_p2                                                               | -   |        | add_ln56     | add | fabric | 0       |
+|  + PerformMatrixCalculation                                                         | 150 |        |              |     |        |         |
+|   + PerformMatrixCalculation_Pipeline_PerformBlockMatrixCalculation_VITIS_LOOP_66_1 | 150 |        |              |     |        |         |
+|     add_ln65_1_fu_11490_p2                                                          | -   |        | add_ln65_1   | add | fabric | 0       |
+|     add_ln65_fu_11499_p2                                                            | -   |        | add_ln65     | add | fabric | 0       |
+|     add_ln67_fu_14363_p2                                                            | -   |        | add_ln67     | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U530                                             | 1   |        | mul_ln70     | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U444                                                         | 1   |        | mul_ln70_1   | mul | auto   | 0       |
+|     mul_16s_16s_16_1_1_U445                                                         | 1   |        | mul_ln70_2   | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U531                                             | 1   |        | mul_ln70_3   | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U446                                                         | 1   |        | mul_ln70_4   | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U532                                             | 1   |        | mul_ln70_5   | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U594                                             | 1   |        | mul_ln70_6   | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U448                                                         | 1   |        | mul_ln70_7   | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U533                                             | 1   |        | mul_ln70_8   | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U449                                                         | 1   |        | mul_ln70_9   | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U534                                             | 1   |        | mul_ln70_10  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U450                                                         | 1   |        | mul_ln70_11  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U535                                             | 1   |        | mul_ln70_12  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U451                                                         | 1   |        | mul_ln70_13  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U536                                             | 1   |        | mul_ln70_14  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U595                                             | 1   |        | mul_ln70_15  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U453                                                         | 1   |        | mul_ln70_16  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U537                                             | 1   |        | mul_ln70_17  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U454                                                         | 1   |        | mul_ln70_18  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U538                                             | 1   |        | mul_ln70_19  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U455                                                         | 1   |        | mul_ln70_20  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U539                                             | 1   |        | mul_ln70_21  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U456                                                         | 1   |        | mul_ln70_22  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U540                                             | 1   |        | mul_ln70_23  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U596                                             | 1   |        | mul_ln70_24  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U458                                                         | 1   |        | mul_ln70_25  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U541                                             | 1   |        | mul_ln70_26  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U459                                                         | 1   |        | mul_ln70_27  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U542                                             | 1   |        | mul_ln70_28  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U597                                             | 1   |        | mul_ln70_29  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U461                                                         | 1   |        | mul_ln70_30  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U543                                             | 1   |        | mul_ln70_31  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U462                                                         | 1   |        | mul_ln70_32  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U544                                             | 1   |        | mul_ln70_33  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U598                                             | 1   |        | mul_ln70_34  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U464                                                         | 1   |        | mul_ln70_35  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U545                                             | 1   |        | mul_ln70_36  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U465                                                         | 1   |        | mul_ln70_37  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U546                                             | 1   |        | mul_ln70_38  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U466                                                         | 1   |        | mul_ln70_39  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U547                                             | 1   |        | mul_ln70_40  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U467                                                         | 1   |        | mul_ln70_41  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U548                                             | 1   |        | mul_ln70_42  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U599                                             | 1   |        | mul_ln70_43  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U469                                                         | 1   |        | mul_ln70_44  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U549                                             | 1   |        | mul_ln70_45  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U470                                                         | 1   |        | mul_ln70_46  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U550                                             | 1   |        | mul_ln70_47  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U600                                             | 1   |        | mul_ln70_48  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U472                                                         | 1   |        | mul_ln70_49  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U551                                             | 1   |        | mul_ln70_50  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U473                                                         | 1   |        | mul_ln70_51  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U552                                             | 1   |        | mul_ln70_52  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U601                                             | 1   |        | mul_ln70_53  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U475                                                         | 1   |        | mul_ln70_54  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U553                                             | 1   |        | mul_ln70_55  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U476                                                         | 1   |        | mul_ln70_56  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U554                                             | 1   |        | mul_ln70_57  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U477                                                         | 1   |        | mul_ln70_58  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U555                                             | 1   |        | mul_ln70_59  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U478                                                         | 1   |        | mul_ln70_60  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U556                                             | 1   |        | mul_ln70_61  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U602                                             | 1   |        | mul_ln70_62  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U480                                                         | 1   |        | mul_ln70_63  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U557                                             | 1   |        | mul_ln70_64  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U481                                                         | 1   |        | mul_ln70_65  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U558                                             | 1   |        | mul_ln70_66  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U603                                             | 1   |        | mul_ln70_67  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U483                                                         | 1   |        | mul_ln70_68  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U559                                             | 1   |        | mul_ln70_69  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U484                                                         | 1   |        | mul_ln70_70  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U560                                             | 1   |        | mul_ln70_71  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U604                                             | 1   |        | mul_ln70_72  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U486                                                         | 1   |        | mul_ln70_73  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U561                                             | 1   |        | mul_ln70_74  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U487                                                         | 1   |        | mul_ln70_75  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U562                                             | 1   |        | mul_ln70_76  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U488                                                         | 1   |        | mul_ln70_77  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U563                                             | 1   |        | mul_ln70_78  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U489                                                         | 1   |        | mul_ln70_79  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U564                                             | 1   |        | mul_ln70_80  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U605                                             | 1   |        | mul_ln70_81  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U491                                                         | 1   |        | mul_ln70_82  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U565                                             | 1   |        | mul_ln70_83  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U492                                                         | 1   |        | mul_ln70_84  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U566                                             | 1   |        | mul_ln70_85  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U493                                                         | 1   |        | mul_ln70_86  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U567                                             | 1   |        | mul_ln70_87  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U494                                                         | 1   |        | mul_ln70_88  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U568                                             | 1   |        | mul_ln70_89  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U606                                             | 1   |        | mul_ln70_90  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U496                                                         | 1   |        | mul_ln70_91  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U569                                             | 1   |        | mul_ln70_92  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U497                                                         | 1   |        | mul_ln70_93  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U570                                             | 1   |        | mul_ln70_94  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U498                                                         | 1   |        | mul_ln70_95  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U571                                             | 1   |        | mul_ln70_96  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U499                                                         | 1   |        | mul_ln70_97  | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U572                                             | 1   |        | mul_ln70_98  | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U607                                             | 1   |        | mul_ln70_99  | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U501                                                         | 1   |        | mul_ln70_100 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U573                                             | 1   |        | mul_ln70_101 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U502                                                         | 1   |        | mul_ln70_102 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U574                                             | 1   |        | mul_ln70_103 | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U608                                             | 1   |        | mul_ln70_104 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U504                                                         | 1   |        | mul_ln70_105 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U575                                             | 1   |        | mul_ln70_106 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U505                                                         | 1   |        | mul_ln70_107 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U576                                             | 1   |        | mul_ln70_108 | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U609                                             | 1   |        | mul_ln70_109 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U507                                                         | 1   |        | mul_ln70_110 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U577                                             | 1   |        | mul_ln70_111 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U508                                                         | 1   |        | mul_ln70_112 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U578                                             | 1   |        | mul_ln70_113 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U509                                                         | 1   |        | mul_ln70_114 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U579                                             | 1   |        | mul_ln70_115 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U510                                                         | 1   |        | mul_ln70_116 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U580                                             | 1   |        | mul_ln70_117 | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U610                                             | 1   |        | mul_ln70_118 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U512                                                         | 1   |        | mul_ln70_119 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U581                                             | 1   |        | mul_ln70_120 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U513                                                         | 1   |        | mul_ln70_121 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U582                                             | 1   |        | mul_ln70_122 | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U611                                             | 1   |        | mul_ln70_123 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U515                                                         | 1   |        | mul_ln70_124 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U583                                             | 1   |        | mul_ln70_125 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U516                                                         | 1   |        | mul_ln70_126 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U584                                             | 1   |        | mul_ln70_127 | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U612                                             | 1   |        | mul_ln70_128 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U518                                                         | 1   |        | mul_ln70_129 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U585                                             | 1   |        | mul_ln70_130 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U519                                                         | 1   |        | mul_ln70_131 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U586                                             | 1   |        | mul_ln70_132 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U520                                                         | 1   |        | mul_ln70_133 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U587                                             | 1   |        | mul_ln70_134 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U521                                                         | 1   |        | mul_ln70_135 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U588                                             | 1   |        | mul_ln70_136 | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U613                                             | 1   |        | mul_ln70_137 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U523                                                         | 1   |        | mul_ln70_138 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U589                                             | 1   |        | mul_ln70_139 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U524                                                         | 1   |        | mul_ln70_140 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U590                                             | 1   |        | mul_ln70_141 | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U614                                             | 1   |        | mul_ln70_142 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U526                                                         | 1   |        | mul_ln70_143 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U591                                             | 1   |        | mul_ln70_144 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U527                                                         | 1   |        | mul_ln70_145 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U592                                             | 1   |        | mul_ln70_146 | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U615                                             | 1   |        | mul_ln70_147 | mul | dsp48  | 3       |
+|     mul_16s_16s_16_1_1_U529                                                         | 1   |        | mul_ln70_148 | mul | auto   | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U593                                             | 1   |        | mul_ln70_149 | mul | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U530                                             | 1   |        | add_ln70     | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U531                                             | 1   |        | add_ln70_1   | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U532                                             | 1   |        | add_ln70_3   | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U533                                             | 1   |        | add_ln70_4   | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U594                                             | 1   |        | add_ln70_5   | add | dsp48  | 3       |
+|     add_ln70_6_fu_17210_p2                                                          | -   |        | add_ln70_6   | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U534                                             | 1   |        | add_ln70_8   | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U535                                             | 1   |        | add_ln70_9   | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U536                                             | 1   |        | add_ln70_11  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U537                                             | 1   |        | add_ln70_12  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U595                                             | 1   |        | add_ln70_13  | add | dsp48  | 3       |
+|     add_ln70_14_fu_17214_p2                                                         | -   |        | add_ln70_14  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U538                                             | 1   |        | add_ln70_17  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U539                                             | 1   |        | add_ln70_18  | add | dsp48  | 3       |
+|     add_ln70_19_fu_17190_p2                                                         | -   |        | add_ln70_19  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U540                                             | 1   |        | add_ln70_20  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U541                                             | 1   |        | add_ln70_21  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U596                                             | 1   |        | add_ln70_22  | add | dsp48  | 3       |
+|     add_ln70_23_fu_17218_p2                                                         | -   |        | add_ln70_23  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U542                                             | 1   |        | add_ln70_25  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U543                                             | 1   |        | add_ln70_26  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U597                                             | 1   |        | add_ln70_27  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U544                                             | 1   |        | add_ln70_29  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U545                                             | 1   |        | add_ln70_30  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U598                                             | 1   |        | add_ln70_31  | add | dsp48  | 3       |
+|     add_ln70_32_fu_17222_p2                                                         | -   |        | add_ln70_32  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U546                                             | 1   |        | add_ln70_36  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U547                                             | 1   |        | add_ln70_37  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U548                                             | 1   |        | add_ln70_39  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U549                                             | 1   |        | add_ln70_40  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U599                                             | 1   |        | add_ln70_41  | add | dsp48  | 3       |
+|     add_ln70_42_fu_17226_p2                                                         | -   |        | add_ln70_42  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U550                                             | 1   |        | add_ln70_44  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U551                                             | 1   |        | add_ln70_45  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U600                                             | 1   |        | add_ln70_46  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U552                                             | 1   |        | add_ln70_48  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U553                                             | 1   |        | add_ln70_49  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U601                                             | 1   |        | add_ln70_50  | add | dsp48  | 3       |
+|     add_ln70_51_fu_17230_p2                                                         | -   |        | add_ln70_51  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U554                                             | 1   |        | add_ln70_54  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U555                                             | 1   |        | add_ln70_55  | add | dsp48  | 3       |
+|     add_ln70_56_fu_17194_p2                                                         | -   |        | add_ln70_56  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U556                                             | 1   |        | add_ln70_57  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U557                                             | 1   |        | add_ln70_58  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U602                                             | 1   |        | add_ln70_59  | add | dsp48  | 3       |
+|     add_ln70_60_fu_17234_p2                                                         | -   |        | add_ln70_60  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U558                                             | 1   |        | add_ln70_62  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U559                                             | 1   |        | add_ln70_63  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U603                                             | 1   |        | add_ln70_64  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U560                                             | 1   |        | add_ln70_66  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U561                                             | 1   |        | add_ln70_67  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U604                                             | 1   |        | add_ln70_68  | add | dsp48  | 3       |
+|     add_ln70_69_fu_17238_p2                                                         | -   |        | add_ln70_69  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U562                                             | 1   |        | add_ln70_74  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U563                                             | 1   |        | add_ln70_75  | add | dsp48  | 3       |
+|     add_ln70_76_fu_17198_p2                                                         | -   |        | add_ln70_76  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U564                                             | 1   |        | add_ln70_77  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U565                                             | 1   |        | add_ln70_78  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U605                                             | 1   |        | add_ln70_79  | add | dsp48  | 3       |
+|     add_ln70_80_fu_17242_p2                                                         | -   |        | add_ln70_80  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U566                                             | 1   |        | add_ln70_82  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U567                                             | 1   |        | add_ln70_83  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U568                                             | 1   |        | add_ln70_85  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U569                                             | 1   |        | add_ln70_86  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U606                                             | 1   |        | add_ln70_87  | add | dsp48  | 3       |
+|     add_ln70_88_fu_17246_p2                                                         | -   |        | add_ln70_88  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U570                                             | 1   |        | add_ln70_91  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U571                                             | 1   |        | add_ln70_92  | add | dsp48  | 3       |
+|     add_ln70_93_fu_17202_p2                                                         | -   |        | add_ln70_93  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U572                                             | 1   |        | add_ln70_94  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U573                                             | 1   |        | add_ln70_95  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U607                                             | 1   |        | add_ln70_96  | add | dsp48  | 3       |
+|     add_ln70_97_fu_17250_p2                                                         | -   |        | add_ln70_97  | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U574                                             | 1   |        | add_ln70_99  | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U575                                             | 1   |        | add_ln70_100 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U608                                             | 1   |        | add_ln70_101 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U576                                             | 1   |        | add_ln70_103 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U577                                             | 1   |        | add_ln70_104 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U609                                             | 1   |        | add_ln70_105 | add | dsp48  | 3       |
+|     add_ln70_106_fu_17254_p2                                                        | -   |        | add_ln70_106 | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U578                                             | 1   |        | add_ln70_110 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U579                                             | 1   |        | add_ln70_111 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U580                                             | 1   |        | add_ln70_113 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U581                                             | 1   |        | add_ln70_114 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U610                                             | 1   |        | add_ln70_115 | add | dsp48  | 3       |
+|     add_ln70_116_fu_17258_p2                                                        | -   |        | add_ln70_116 | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U582                                             | 1   |        | add_ln70_118 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U583                                             | 1   |        | add_ln70_119 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U611                                             | 1   |        | add_ln70_120 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U584                                             | 1   |        | add_ln70_122 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U585                                             | 1   |        | add_ln70_123 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U612                                             | 1   |        | add_ln70_124 | add | dsp48  | 3       |
+|     add_ln70_125_fu_17262_p2                                                        | -   |        | add_ln70_125 | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U586                                             | 1   |        | add_ln70_128 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U587                                             | 1   |        | add_ln70_129 | add | dsp48  | 3       |
+|     add_ln70_130_fu_17206_p2                                                        | -   |        | add_ln70_130 | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U588                                             | 1   |        | add_ln70_131 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U589                                             | 1   |        | add_ln70_132 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U613                                             | 1   |        | add_ln70_133 | add | dsp48  | 3       |
+|     add_ln70_134_fu_17266_p2                                                        | -   |        | add_ln70_134 | add | fabric | 0       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U590                                             | 1   |        | add_ln70_136 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U591                                             | 1   |        | add_ln70_137 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U614                                             | 1   |        | add_ln70_138 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U592                                             | 1   |        | add_ln70_140 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U593                                             | 1   |        | add_ln70_141 | add | dsp48  | 3       |
+|     mac_muladd_16s_16s_16ns_16_4_1_U615                                             | 1   |        | add_ln70_142 | add | dsp48  | 3       |
+|     add_ln70_143_fu_17270_p2                                                        | -   |        | add_ln70_143 | add | fabric | 0       |
+|     add_ln66_fu_16165_p2                                                            | -   |        | add_ln66     | add | fabric | 0       |
+|  + real_matmul_Pipeline_VITIS_LOOP_78_1                                             | 0   |        |              |     |        |         |
+|    add_ln77_4_fu_188_p2                                                             | -   |        | add_ln77_4   | add | fabric | 0       |
+|    add_ln77_fu_200_p2                                                               | -   |        | add_ln77     | add | fabric | 0       |
+|    add_ln77_1_fu_286_p2                                                             | -   |        | add_ln77_1   | add | fabric | 0       |
+|    mul_7ns_10ns_16_1_1_U1829                                                        | -   |        | mul_ln77     | mul | auto   | 0       |
+|    add_ln80_fu_250_p2                                                               | -   |        | add_ln80     | add | fabric | 0       |
+|    add_ln78_fu_256_p2                                                               | -   |        | add_ln78     | add | fabric | 0       |
++-------------------------------------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+---------------+------+------+--------+-----------+---------+------+---------+
-| Name          | BRAM | URAM | Pragma | Variable  | Storage | Impl | Latency |
-+---------------+------+------+--------+-----------+---------+------+---------+
-| + real_matmul | 4    | 0    |        |           |         |      |         |
-|   MatA_BRAM_U | 1    | -    |        | MatA_BRAM | ram_1p  | auto | 1       |
-|   MatB_BRAM_U | 1    | -    |        | MatB_BRAM | ram_1p  | auto | 1       |
-+---------------+------+------+--------+-----------+---------+------+---------+
++-----------------+------+------+--------+-------------+---------+------+---------+
+| Name            | BRAM | URAM | Pragma | Variable    | Storage | Impl | Latency |
++-----------------+------+------+--------+-------------+---------+------+---------+
+| + real_matmul   | 10   | 0    |        |             |         |      |         |
+|   MatA_BRAM_U   | 1    | -    |        | MatA_BRAM   | ram_s2p | auto | 1       |
+|   MatA_BRAM_1_U | 1    | -    |        | MatA_BRAM_1 | ram_s2p | auto | 1       |
+|   MatA_BRAM_2_U | 1    | -    |        | MatA_BRAM_2 | ram_s2p | auto | 1       |
+|   MatA_BRAM_3_U | 1    | -    |        | MatA_BRAM_3 | ram_s2p | auto | 1       |
+|   MatB_BRAM_U   | 1    | -    |        | MatB_BRAM   | ram_s2p | auto | 1       |
+|   MatB_BRAM_1_U | 1    | -    |        | MatB_BRAM_1 | ram_s2p | auto | 1       |
+|   MatB_BRAM_2_U | 1    | -    |        | MatB_BRAM_2 | ram_s2p | auto | 1       |
+|   MatB_BRAM_3_U | 1    | -    |        | MatB_BRAM_3 | ram_s2p | auto | 1       |
+|   MatC_BRAM_U   | -    | -    |        | MatC_BRAM   | ram_1p  | auto | 1       |
++-----------------+------+------+--------+-------------+---------+------+---------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+------------------------------------------------------+----------------------------------------------+
-| Type      | Options                                              | Location                                     |
-+-----------+------------------------------------------------------+----------------------------------------------+
-| interface | m_axi depth=1 port=MatA_DRAM offset=slave bundle=mem | real_matmul.cpp:21 in real_matmul, MatA_DRAM |
-| interface | m_axi depth=1 port=MatB_DRAM offset=slave bundle=mem | real_matmul.cpp:22 in real_matmul, MatB_DRAM |
-| interface | m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem | real_matmul.cpp:23 in real_matmul, MatC_DRAM |
-| interface | s_axilite port=return                                | real_matmul.cpp:25 in real_matmul, return    |
-+-----------+------------------------------------------------------+----------------------------------------------+
++-----------------+------------------------------------------------------+--------------------------------------------------+
+| Type            | Options                                              | Location                                         |
++-----------------+------------------------------------------------------+--------------------------------------------------+
+| interface       | m_axi depth=1 port=MatA_DRAM offset=slave bundle=mem | real_matmul.cpp:24 in real_matmul, MatA_DRAM     |
+| interface       | m_axi depth=1 port=MatB_DRAM offset=slave bundle=mem | real_matmul.cpp:25 in real_matmul, MatB_DRAM     |
+| interface       | m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem | real_matmul.cpp:26 in real_matmul, MatC_DRAM     |
+| interface       | s_axilite port=return                                | real_matmul.cpp:28 in real_matmul, return        |
+| array_partition | variable=MatA_BRAM block factor=25 dim=1             | real_matmul.cpp:36 in real_matmul, MatA_BRAM     |
+| array_partition | variable=MatB_BRAM block factor=50 dim=2             | real_matmul.cpp:37 in real_matmul, MatB_BRAM     |
+| pipeline        | II=1                                                 | real_matmul.cpp:50 in loadmatricesfromdramtobram |
+| pipeline        | II=1                                                 | real_matmul.cpp:57 in loadmatricesfromdramtobram |
+| pipeline        | II=1                                                 | real_matmul.cpp:68 in performmatrixcalculation   |
+| pipeline        | II=1                                                 | real_matmul.cpp:79 in loadmatricesfrombramtodram |
++-----------------+------------------------------------------------------+--------------------------------------------------+
 
 

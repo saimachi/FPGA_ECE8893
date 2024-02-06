@@ -1,13 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
-set name real_matmul_mul_2ns_9ns_9_1_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
-set id 30
-set name real_matmul_mac_muladd_6ns_9s_14ns_15_4_1
+set id 1837
+set name real_matmul_mac_muladd_5ns_9s_13ns_14_4_1
 set corename simcore_mac
 set op mac
 set stage_num 4
@@ -15,16 +9,16 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 6
+set in0_width 5
 set in0_signed 0
 set in1_width 9
 set in1_signed 1
-set in2_width 14
+set in2_width 13
 set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 15
-set arg_lists {i0 {6 0 +} i1 {9 1 +} m {15 1 +} i2 {14 0 +} p {15 0 +} c_reg {1} rnd {0} acc {0} }
+set out_width 14
+set arg_lists {i0 {5 0 +} i1 {9 1 +} m {14 1 +} i2 {13 0 +} p {14 0 +} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
@@ -67,6 +61,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler real_matmul_MatA_BRAM_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler real_matmul_MatC_BRAM_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -122,7 +121,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 34 \
+			id 1841 \
 			corename real_matmul_control_axilite \
 			name real_matmul_control_s_axi \
 			ports {$port_control} \

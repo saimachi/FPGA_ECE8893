@@ -8,10 +8,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "real.h"
+#include <string.h>
 
-#define BLOCK_SIZE 2
+#define BLOCK_SIZE 4
 
-void block_matmul(real_t[M][N], real_t[N][K], int, real_t[M][K]);
+void LoadMatricesFromDRAMToBRAM(real_t MatA_BRAM[BLOCK_SIZE][N], real_t MatA_DRAM[M][N], real_t MatB_BRAM[N][BLOCK_SIZE], real_t MatB_DRAM[N][K], int counter);
+void PerformMatrixCalculation(real_t MatA_BRAM[BLOCK_SIZE][N], real_t MatB_BRAM[N][BLOCK_SIZE], real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE]);
+void LoadMatricesFromBRAMToDRAM(real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE], real_t MatC_DRAM[M][K], int counter);
 
 void real_matmul( 
     real_t MatA_DRAM[M][N], 
@@ -23,46 +26,57 @@ void real_matmul(
 #pragma HLS interface m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem
 
 #pragma HLS interface s_axilite port=return
-
-    for (int counter = 0; counter < (M / BLOCK_SIZE) * (K / BLOCK_SIZE); counter++) {
-    	block_matmul(MatA_DRAM, MatB_DRAM, counter, MatC_DRAM);
-    }
+	CallBlockMatmul: for (int counter = 0; counter < (M / BLOCK_SIZE) * (K / BLOCK_SIZE); counter++) {
+		real_t MatA_BRAM[BLOCK_SIZE][N];
+		real_t MatB_BRAM[N][BLOCK_SIZE];
+		real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE];
+		// Partition A along dimension 1 and B along dimension 2
+		// Partition A Factor: M/BLOCK_SIZE
+		// Partition B Factor: K/BLOCK_SIZE
+		#pragma HLS array_partition variable=MatA_BRAM block factor=25 dim=1
+		#pragma HLS array_partition variable=MatB_BRAM block factor=50 dim=2
+		LoadMatricesFromDRAMToBRAM(MatA_BRAM, MatA_DRAM, MatB_BRAM, MatB_DRAM, counter);
+		PerformMatrixCalculation(MatA_BRAM, MatB_BRAM, MatC_BRAM);
+		LoadMatricesFromBRAMToDRAM(MatC_BRAM, MatC_DRAM, counter);
+	}
 }
 
-void block_matmul(
-		real_t MatA_DRAM[M][N],
-		real_t MatB_DRAM[N][K],
-		int counter,
-		real_t MatC_DRAM[M][K]
-) {
-	real_t MatA_BRAM[BLOCK_SIZE][N];
-	real_t MatB_BRAM[N][BLOCK_SIZE];
-	real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE] = {};
-
+void LoadMatricesFromDRAMToBRAM(real_t MatA_BRAM[BLOCK_SIZE][N], real_t MatA_DRAM[M][N], real_t MatB_BRAM[N][BLOCK_SIZE], real_t MatB_DRAM[N][K], int counter) {
 	int i, j, k;
 
 	// Load values from DRAM into BRAM
-	for (i = 0; i < BLOCK_SIZE; i++) {
+	LoadMatAFromDRAMtoBRAM: for (i = 0; i < BLOCK_SIZE; i++) {
 		for (j = 0; j < N; j++) {
+			#pragma HLS PIPELINE II=1
 			MatA_BRAM[i][j] = MatA_DRAM[BLOCK_SIZE * (counter / (K / BLOCK_SIZE)) + i][j];
-			MatB_BRAM[j][i] = MatB_DRAM[j][i + BLOCK_SIZE * (counter % (K / BLOCK_SIZE))];
 		}
 	}
 
+	LoadMatBFromDRAMtoBRAM: for (i = 0; i < BLOCK_SIZE; i++) {
+		for (j = 0; j < N; j++) {
+			#pragma HLS PIPELINE II=1
+			MatB_BRAM[j][i] = MatB_DRAM[j][i + BLOCK_SIZE * (counter % (K / BLOCK_SIZE))];
+		}
+	}
+}
+
+void PerformMatrixCalculation(real_t MatA_BRAM[BLOCK_SIZE][N], real_t MatB_BRAM[N][BLOCK_SIZE], real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE]) {
 	// Calculation Loop
-	for (i = 0; i < BLOCK_SIZE; i++) {
-		for (j = 0; j < BLOCK_SIZE; j++) {
+	PerformBlockMatrixCalculation: for (int i = 0; i < BLOCK_SIZE; i++) {
+		for (int j = 0; j < BLOCK_SIZE; j++) {
 			MatC_BRAM[i][j] = 0;
-			for (k = 0; k < N; k++) {
+			#pragma HLS PIPELINE II=1
+			for (int k = 0; k < N; k++) {
 				MatC_BRAM[i][j] += MatA_BRAM[i][k] * MatB_BRAM[k][j];
 			}
 		}
 	}
+}
 
-	// Write values from BRAM back to DRAM
-	for (i = 0; i < BLOCK_SIZE; i++) {
-		for (j = 0; j < BLOCK_SIZE; j++) {
-			// printf("(%d, %d)\n", BLOCK_SIZE * (counter / (K / BLOCK_SIZE)) + i, j + BLOCK_SIZE * (counter % (K / BLOCK_SIZE)));
+void LoadMatricesFromBRAMToDRAM(real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE], real_t MatC_DRAM[M][K], int counter) {
+	LoadArraysFromBRAMtoDRAM: for (int i = 0; i < BLOCK_SIZE; i++) {
+		for (int j = 0; j < BLOCK_SIZE; j++) {
+			#pragma HLS PIPELINE II=1
 			MatC_DRAM[BLOCK_SIZE * (counter / (K / BLOCK_SIZE)) + i][j + BLOCK_SIZE * (counter % (K / BLOCK_SIZE))] = MatC_BRAM[i][j];
 		}
 	}

@@ -47,75 +47,48 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_27_1:  '
-    FileOffset:      27
+    Message:         'Added loop label VITIS_LOOP_49_1:  '
+    FileOffset:      49
     FilePath:        real_matmul.cpp
     Replacements:    
       - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
-        Offset:          1012104
+        Offset:          1025823
         Length:          0
-        ReplacementText: 'VITIS_LOOP_27_1: '
+        ReplacementText: 'VITIS_LOOP_49_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_45_1:  '
-    FileOffset:      45
-    FilePath:        real_matmul.cpp
-    Replacements:    
-      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
-        Offset:          1012471
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_45_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_46_2:  '
-    FileOffset:      46
-    FilePath:        real_matmul.cpp
-    Replacements:    
-      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
-        Offset:          1012499
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_46_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_53_3:  '
-    FileOffset:      53
-    FilePath:        real_matmul.cpp
-    Replacements:    
-      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
-        Offset:          1012669
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_53_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_54_4:  '
-    FileOffset:      54
-    FilePath:        real_matmul.cpp
-    Replacements:    
-      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
-        Offset:          1012697
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_54_4: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_56_5:  '
+    Message:         'Added loop label VITIS_LOOP_56_2:  '
     FileOffset:      56
     FilePath:        real_matmul.cpp
     Replacements:    
       - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
-        Offset:          1012750
+        Offset:          1026002
         Length:          0
-        ReplacementText: 'VITIS_LOOP_56_5: '
+        ReplacementText: 'VITIS_LOOP_56_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_63_6:  '
-    FileOffset:      63
+    Message:         'Added loop label VITIS_LOOP_66_1:  '
+    FileOffset:      66
     FilePath:        real_matmul.cpp
     Replacements:    
       - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
-        Offset:          1012851
+        Offset:          1026303
         Length:          0
-        ReplacementText: 'VITIS_LOOP_63_6: '
+        ReplacementText: 'VITIS_LOOP_66_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_64_7:  '
-    FileOffset:      64
+    Message:         'Added loop label VITIS_LOOP_69_2:  '
+    FileOffset:      69
     FilePath:        real_matmul.cpp
     Replacements:    
       - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
-        Offset:          1012879
+        Offset:          1026384
         Length:          0
-        ReplacementText: 'VITIS_LOOP_64_7: '
+        ReplacementText: 'VITIS_LOOP_69_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_78_1:  '
+    FileOffset:      78
+    FilePath:        real_matmul.cpp
+    Replacements:    
+      - FilePath:        'C:\Personal\FPGA\FPGA_ECE8893\2023_Spring\Lab1\PartA\real_proj\solution1\.autopilot\db\real_matmul.pp.0.cpp'
+        Offset:          1026647
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_78_1: '
 ...

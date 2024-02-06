@@ -2,20 +2,53 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/script.tcl:22:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=real_matmul" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:21:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:24:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatA_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:22:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:25:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatB_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:23:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:26:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:25:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:28:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="real_matmul.cpp:20:0" msg_body="Inlining function 'block_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], int, ap_int&lt;16&gt; (*) [200])' into 'real_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], ap_int&lt;16&gt; (*) [200])'">
-        <args Callee="block_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], int, ap_int&lt;16&gt; (*) [200])" Callee-DebugLoc="File real_matmul.cpp Line 37 Column 0" Caller="real_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], ap_int&lt;16&gt; (*) [200])" Caller-DebugLoc="File real_matmul.cpp Line 20 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=MatA_BRAM block factor=25 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=MatB_BRAM block factor=50 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:50:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LoadMatricesFromDRAMToBRAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:57:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LoadMatricesFromDRAMToBRAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:68:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="PerformMatrixCalculation" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:79:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="LoadMatricesFromBRAMToDRAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="real_matmul.cpp:69:19" msg_body="Loop 'VITIS_LOOP_69_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_69_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="real_matmul.cpp:63:0" msg_body="Unrolling loop 'VITIS_LOOP_69_2' (real_matmul.cpp:69:19) in function 'PerformMatrixCalculation' completely with a factor of 150">
+        <args Factor="150" LoopLoc="real_matmul.cpp:69:19" LoopName="VITIS_LOOP_69_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="real_matmul.cpp:23:0" msg_body="Inlining function 'LoadMatricesFromDRAMToBRAM(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [4], ap_int&lt;16&gt; (*) [200], int)' into 'real_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], ap_int&lt;16&gt; (*) [200])'">
+        <args Callee="LoadMatricesFromDRAMToBRAM(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [4], ap_int&lt;16&gt; (*) [200], int)" Callee-DebugLoc="File real_matmul.cpp Line 44 Column 0" Caller="real_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], ap_int&lt;16&gt; (*) [200])" Caller-DebugLoc="File real_matmul.cpp Line 23 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="real_matmul.cpp:23:0" msg_body="Inlining function 'LoadMatricesFromBRAMToDRAM(ap_int&lt;16&gt; (*) [4], ap_int&lt;16&gt; (*) [200], int)' into 'real_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], ap_int&lt;16&gt; (*) [200])'">
+        <args Callee="LoadMatricesFromBRAMToDRAM(ap_int&lt;16&gt; (*) [4], ap_int&lt;16&gt; (*) [200], int)" Callee-DebugLoc="File real_matmul.cpp Line 76 Column 0" Caller="real_matmul(ap_int&lt;16&gt; (*) [150], ap_int&lt;16&gt; (*) [200], ap_int&lt;16&gt; (*) [200])" Caller-DebugLoc="File real_matmul.cpp Line 23 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="real_matmul.cpp:30:10" msg_body="Applying array_partition to 'MatA_BRAM': Cyclic partitioning with factor 25 on dimension 1.">
+        <args Dim="1" Factor="25" Mode="Cyclic" UOName="MatA_BRAM"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="real_matmul.cpp:31:10" msg_body="Applying array_partition to 'MatB_BRAM': Cyclic partitioning with factor 50 on dimension 2.">
+        <args Dim="2" Factor="50" Mode="Cyclic" UOName="MatB_BRAM"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

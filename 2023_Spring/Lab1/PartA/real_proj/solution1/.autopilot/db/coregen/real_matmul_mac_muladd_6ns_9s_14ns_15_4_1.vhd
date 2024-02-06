@@ -9,7 +9,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_1 is
+entity real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_4 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
@@ -20,11 +20,11 @@ port (
     dout: out std_logic_vector(15 - 1 downto 0));
 
     attribute use_dsp : string;
-    attribute use_dsp of real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_1 : entity is "yes";
+    attribute use_dsp of real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_4 : entity is "yes";
 
 end entity;
 
-architecture behav of real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_1 is
+architecture behav of real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_4 is
     signal a       : signed(25-1 downto 0);
     signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
@@ -78,7 +78,7 @@ entity real_matmul_mac_muladd_6ns_9s_14ns_15_4_1 is
 end entity;
 
 architecture arch of real_matmul_mac_muladd_6ns_9s_14ns_15_4_1 is
-    component real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_1 is
+    component real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_4 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -92,7 +92,7 @@ architecture arch of real_matmul_mac_muladd_6ns_9s_14ns_15_4_1 is
 
 
 begin
-    real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_1_U :  component real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_1
+    real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_4_U :  component real_matmul_mac_muladd_6ns_9s_14ns_15_4_1_DSP48_4
     port map (
         clk => clk,
         rst => reset,

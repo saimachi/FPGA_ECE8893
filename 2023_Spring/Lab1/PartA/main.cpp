@@ -21,16 +21,14 @@ int main()
     // Generate Matrix A with random values
     for(int i = 0; i < M; i++) {
         for(int j = 0; j < N; j++) {
-            // MatA_tb[i][j] = rand() % 50;
-            MatA_tb[i][j] = 1;
+            MatA_tb[i][j] = rand() % 50;
         }
     }
 
     // Generate Matrix B with random values
     for(int i = 0; i < N; i++) {
         for(int j = 0; j < K; j++) {
-            // MatB_tb[i][j] = rand() % 50;
-            MatB_tb[i][j] = 1;
+            MatB_tb[i][j] = rand() % 50;
         }
     }
 
@@ -61,6 +59,10 @@ int main()
     int passed = 1;
     for(int i = 0; i < M; i++) {
         for(int j = 0; j < K; j++) {
+            /*
+            printf("MatC_tb[%d][%d]: %hi \t MatC_expected[%d][%d]: %hi\n", 
+                    i, j, MatC_tb[i][j], i, j, MatC_expected[i][j]);
+            */
             if(MatC_tb[i][j] != MatC_expected[i][j]) {
                 printf("Mismatch at MatC[%d][%d]: Expected: %hi \t Actual: %hi\n", 
                         i, j, MatC_expected[i][j], MatC_tb[i][j]);
