@@ -1,0 +1,67 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Sat Feb 10 12:57:31 2024
+| Host         : LAPTOP-QFCR4R7C running 64-bit major release  (build 9200)
+| Command      : report_drc -file matmul_wrapper_drc_opted.rpt -pb matmul_wrapper_drc_opted.pb -rpx matmul_wrapper_drc_opted.rpx
+| Design       : matmul_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 6
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPIP-1 | Warning  | Input pipelining       | 4          |
+| DPOP-2 | Warning  | MREG Output pipelining | 2          |
++--------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromBRAMToDRAM_U0/grp_LoadMatricesFromBRAMToDRAM_Pipeline_VITIS_LOOP_81_1_fu_70/ama_addmuladd_8ns_3ns_9ns_9ns_17_4_1_U1850/real_matmul_ama_addmuladd_8ns_3ns_9ns_9ns_17_4_1_DSP48_2_U/p_reg_reg input matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromBRAMToDRAM_U0/grp_LoadMatricesFromBRAMToDRAM_Pipeline_VITIS_LOOP_81_1_fu_70/ama_addmuladd_8ns_3ns_9ns_9ns_17_4_1_U1850/real_matmul_ama_addmuladd_8ns_3ns_9ns_9ns_17_4_1_DSP48_2_U/p_reg_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromBRAMToDRAM_U0/tmp_reg_134_reg input matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromBRAMToDRAM_U0/tmp_reg_134_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromDRAMToBRAM_U0/grp_LoadMatricesFromDRAMToBRAM_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_59_2_fu_118/mac_muladd_8ns_9ns_9ns_16_4_1_U9/real_matmul_mac_muladd_8ns_9ns_9ns_16_4_1_DSP48_0_U/p_reg_reg input matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromDRAMToBRAM_U0/grp_LoadMatricesFromDRAMToBRAM_Pipeline_LoadMatBFromDRAMtoBRAM_VITIS_LOOP_59_2_fu_118/mac_muladd_8ns_9ns_9ns_16_4_1_U9/real_matmul_mac_muladd_8ns_9ns_9ns_16_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromDRAMToBRAM_U0/mul_ln51_reg_222_reg input matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromDRAMToBRAM_U0/mul_ln51_reg_222_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromDRAMToBRAM_U0/mul_ln51_reg_222_reg multiplier stage matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromDRAMToBRAM_U0/mul_ln51_reg_222_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromDRAMToBRAM_U0/tmp_reg_217_reg multiplier stage matmul_i/real_matmul_0/inst/dataflow_in_loop_CallBlockMatmul_1_U0/LoadMatricesFromDRAMToBRAM_U0/tmp_reg_217_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

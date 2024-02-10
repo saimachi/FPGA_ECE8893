@@ -46,7 +46,6 @@ int main()
     // To make sure your optimizations do not change the functionality
     for(int i = 0; i < M; i++) {
         for(int j = 0; j < K; j++) {
-            
             MatC_expected[i][j] = 0;
             for(int p = 0; p < N; p++) {
                 MatC_expected[i][j] += MatA_tb[i][p] * MatB_tb[p][j];
@@ -59,10 +58,6 @@ int main()
     int passed = 1;
     for(int i = 0; i < M; i++) {
         for(int j = 0; j < K; j++) {
-            /*
-            printf("MatC_tb[%d][%d]: %hi \t MatC_expected[%d][%d]: %hi\n", 
-                    i, j, MatC_tb[i][j], i, j, MatC_expected[i][j]);
-            */
             if(MatC_tb[i][j] != MatC_expected[i][j]) {
                 printf("Mismatch at MatC[%d][%d]: Expected: %hi \t Actual: %hi\n", 
                         i, j, MatC_expected[i][j], MatC_tb[i][j]);
@@ -70,7 +65,7 @@ int main()
             }
         }
     }
-    
+
     if(passed) {
         printf("-----------------------------------\n");
         printf("|         TEST PASSED!            |\n");

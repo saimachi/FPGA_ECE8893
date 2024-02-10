@@ -1,0 +1,466 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sat Feb 10 12:55:43 2024
+# Process ID: 24024
+# Current directory: C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1
+# Command line: vivado.exe -log matmul_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source matmul_wrapper.tcl
+# Log file: C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/matmul_wrapper.vds
+# Journal file: C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1\vivado.jou
+# Running On: LAPTOP-QFCR4R7C, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 34204 MB
+#-----------------------------------------------------------
+source matmul_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 426.535 ; gain = 163.016
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/real_proj/solution1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Tools/Xilinx-2-HLS/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.cache/ip 
+Command: read_checkpoint -auto_incremental -incremental C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.srcs/utils_1/imports/synth_1/matmul_design_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.srcs/utils_1/imports/synth_1/matmul_design_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top matmul_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34668
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1293.105 ; gain = 408.441
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'matmul_wrapper' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/hdl/matmul_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'matmul' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:13]
+INFO: [Synth 8-6157] synthesizing module 'matmul_axi_mem_intercon_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:617]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1TT24W' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1815]
+INFO: [Synth 8-6157] synthesizing module 'matmul_auto_pc_0' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_auto_pc_0' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'matmul_auto_us_0' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_auto_us_0' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1TT24W' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1815]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_axi_mem_intercon_0' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:617]
+INFO: [Synth 8-6157] synthesizing module 'matmul_axi_mem_intercon_1_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:812]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_YOR70E' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:2409]
+INFO: [Synth 8-6157] synthesizing module 'matmul_auto_pc_1' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_auto_pc_1' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'matmul_auto_us_1' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_auto_us_1' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_YOR70E' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:2409]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_axi_mem_intercon_1_0' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:812]
+INFO: [Synth 8-6157] synthesizing module 'matmul_axi_mem_intercon_2_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1007]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1MGED4K' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1537]
+INFO: [Synth 8-6157] synthesizing module 'matmul_auto_pc_2' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_auto_pc_2' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_pc_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_wid' of module 'matmul_auto_pc_2' is unconnected for instance 'auto_pc' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1728]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'matmul_auto_pc_2' has 44 connections declared, but only 43 given [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1728]
+INFO: [Synth 8-6157] synthesizing module 'matmul_auto_us_2' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_us_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_auto_us_2' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_us_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1MGED4K' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1537]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_axi_mem_intercon_2_0' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1007]
+INFO: [Synth 8-6157] synthesizing module 'matmul_processing_system7_0_0' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_processing_system7_0_0' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_AWREADY' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BVALID' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WREADY' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BRESP' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_AWREADY' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_BVALID' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_WREADY' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_BRESP' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_BID' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RID' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RCOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_WCOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RACOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_WACOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARREADY' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RLAST' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RVALID' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RRESP' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_BID' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RID' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RDATA' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RCOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WCOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RACOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WACOUNT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'MIO' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_CAS_n' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_CKE' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_Clk_n' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_Clk' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_CS_n' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_DRSTB' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_ODT' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_RAS_n' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_WEB' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_BankAddr' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_Addr' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_VRN' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_VRP' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_DM' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_DQ' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_DQS_n' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'DDR_DQS' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'PS_SRSTB' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'PS_CLK' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7071] port 'PS_PORB' of module 'matmul_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'matmul_processing_system7_0_0' has 197 connections declared, but only 145 given [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:307]
+INFO: [Synth 8-6157] synthesizing module 'matmul_ps7_0_axi_periph_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1232]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_MX0S49' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:2054]
+INFO: [Synth 8-6157] synthesizing module 'matmul_auto_pc_3' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_auto_pc_3' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'matmul_auto_us_3' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_us_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_auto_us_3' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_auto_us_3_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'matmul_auto_us_3' is unconnected for instance 'auto_us' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:2368]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'matmul_auto_us_3' is unconnected for instance 'auto_us' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:2368]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'matmul_auto_us_3' has 40 connections declared, but only 38 given [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:2368]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_MX0S49' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:2054]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_ps7_0_axi_periph_0' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:1232]
+INFO: [Synth 8-6157] synthesizing module 'matmul_real_matmul_0_0' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_real_matmul_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_real_matmul_0_0' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_real_matmul_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWADDR' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWLEN' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWSIZE' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWBURST' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWLOCK' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWREGION' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWCACHE' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWPROT' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWQOS' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_AWVALID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_WID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_WDATA' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_WSTRB' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_WLAST' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_WVALID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatA_BREADY' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWADDR' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWLEN' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWSIZE' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWBURST' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWLOCK' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWREGION' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWCACHE' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWPROT' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWQOS' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_AWVALID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_WID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_WDATA' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_WSTRB' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_WLAST' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_WVALID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatB_BREADY' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_WID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_ARID' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_ARADDR' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_ARLEN' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_ARSIZE' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_ARBURST' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_ARLOCK' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_ARREGION' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_ARCACHE' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+WARNING: [Synth 8-7071] port 'm_axi_MatC_ARPROT' of module 'matmul_real_matmul_0_0' is unconnected for instance 'real_matmul_0' [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+INFO: [Common 17-14] Message 'Synth 8-7071' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7023] instance 'real_matmul_0' of module 'matmul_real_matmul_0_0' has 140 connections declared, but only 92 given [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:515]
+INFO: [Synth 8-6157] synthesizing module 'matmul_rst_ps7_0_50M_0' [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_rst_ps7_0_50M_0' (0#1) [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/.Xil/Vivado-24024-LAPTOP-QFCR4R7C/realtime/matmul_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'matmul_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:608]
+INFO: [Synth 8-6155] done synthesizing module 'matmul' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/synth/matmul.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_wrapper' (0#1) [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/hdl/matmul_wrapper.v:13]
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_MX0S49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_MX0S49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module matmul_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module matmul_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1MGED4K is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1MGED4K is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_awlock[1] in module s00_couplers_imp_1MGED4K is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module matmul_axi_mem_intercon_2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module matmul_axi_mem_intercon_2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_YOR70E is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_YOR70E is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_arlock[1] in module s00_couplers_imp_YOR70E is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module matmul_axi_mem_intercon_1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module matmul_axi_mem_intercon_1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1TT24W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1TT24W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_arlock[1] in module s00_couplers_imp_1TT24W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module matmul_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module matmul_axi_mem_intercon_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1393.090 ; gain = 508.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1393.090 ; gain = 508.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1393.090 ; gain = 508.426
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1393.090 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_real_matmul_0_0/matmul_real_matmul_0_0/matmul_real_matmul_0_0_in_context.xdc] for cell 'matmul_i/real_matmul_0'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_real_matmul_0_0/matmul_real_matmul_0_0/matmul_real_matmul_0_0_in_context.xdc] for cell 'matmul_i/real_matmul_0'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_processing_system7_0_0/matmul_processing_system7_0_0/matmul_processing_system7_0_0_in_context.xdc] for cell 'matmul_i/processing_system7_0'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_processing_system7_0_0/matmul_processing_system7_0_0/matmul_processing_system7_0_0_in_context.xdc] for cell 'matmul_i/processing_system7_0'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_pc_0/matmul_auto_pc_0/matmul_auto_pc_0_in_context.xdc] for cell 'matmul_i/axi_mem_intercon/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_pc_0/matmul_auto_pc_0/matmul_auto_pc_0_in_context.xdc] for cell 'matmul_i/axi_mem_intercon/s00_couplers/auto_pc'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_us_0/matmul_auto_us_0/matmul_auto_us_0_in_context.xdc] for cell 'matmul_i/axi_mem_intercon/s00_couplers/auto_us'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_us_0/matmul_auto_us_0/matmul_auto_us_0_in_context.xdc] for cell 'matmul_i/axi_mem_intercon/s00_couplers/auto_us'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_rst_ps7_0_50M_0/matmul_rst_ps7_0_50M_0/matmul_design_rst_ps7_0_50M_0_in_context.xdc] for cell 'matmul_i/rst_ps7_0_50M'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_rst_ps7_0_50M_0/matmul_rst_ps7_0_50M_0/matmul_design_rst_ps7_0_50M_0_in_context.xdc] for cell 'matmul_i/rst_ps7_0_50M'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_pc_1/matmul_auto_pc_1/matmul_auto_pc_0_in_context.xdc] for cell 'matmul_i/axi_mem_intercon_1/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_pc_1/matmul_auto_pc_1/matmul_auto_pc_0_in_context.xdc] for cell 'matmul_i/axi_mem_intercon_1/s00_couplers/auto_pc'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_us_1/matmul_auto_us_1/matmul_auto_us_0_in_context.xdc] for cell 'matmul_i/axi_mem_intercon_1/s00_couplers/auto_us'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_us_1/matmul_auto_us_1/matmul_auto_us_0_in_context.xdc] for cell 'matmul_i/axi_mem_intercon_1/s00_couplers/auto_us'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_pc_2/matmul_auto_pc_2/matmul_auto_pc_2_in_context.xdc] for cell 'matmul_i/axi_mem_intercon_2/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_pc_2/matmul_auto_pc_2/matmul_auto_pc_2_in_context.xdc] for cell 'matmul_i/axi_mem_intercon_2/s00_couplers/auto_pc'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_us_2/matmul_auto_us_2/matmul_auto_us_2_in_context.xdc] for cell 'matmul_i/axi_mem_intercon_2/s00_couplers/auto_us'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_us_2/matmul_auto_us_2/matmul_auto_us_2_in_context.xdc] for cell 'matmul_i/axi_mem_intercon_2/s00_couplers/auto_us'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_pc_3/matmul_auto_pc_3/matmul_design_auto_pc_1_in_context.xdc] for cell 'matmul_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_pc_3/matmul_auto_pc_3/matmul_design_auto_pc_1_in_context.xdc] for cell 'matmul_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_us_3/matmul_auto_us_3/matmul_design_auto_us_1_in_context.xdc] for cell 'matmul_i/ps7_0_axi_periph/s00_couplers/auto_us'
+Finished Parsing XDC File [c:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.gen/sources_1/bd/matmul/ip/matmul_auto_us_3/matmul_auto_us_3/matmul_design_auto_us_1_in_context.xdc] for cell 'matmul_i/ps7_0_axi_periph/s00_couplers/auto_us'
+Parsing XDC File [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1411.473 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1411.473 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/real_matmul_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/processing_system7_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/axi_mem_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/axi_mem_intercon. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/rst_ps7_0_50M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/axi_mem_intercon_1/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/axi_mem_intercon_1/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/axi_mem_intercon_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/axi_mem_intercon_2/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/axi_mem_intercon_2/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/axi_mem_intercon_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/ps7_0_axi_periph/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for matmul_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.srcs/utils_1/imports/synth_1/matmul_design_wrapper.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port ACLK in module matmul_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module matmul_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module matmul_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module matmul_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module matmul_axi_mem_intercon_2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module matmul_axi_mem_intercon_2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module matmul_axi_mem_intercon_2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module matmul_axi_mem_intercon_2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_AXI_awlock[1] in module matmul_axi_mem_intercon_2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module matmul_axi_mem_intercon_1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module matmul_axi_mem_intercon_1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module matmul_axi_mem_intercon_1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module matmul_axi_mem_intercon_1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_AXI_arlock[1] in module matmul_axi_mem_intercon_1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module matmul_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module matmul_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module matmul_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module matmul_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_AXI_arlock[1] in module matmul_axi_mem_intercon_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1411.473 ; gain = 526.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1417.574 ; gain = 532.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1417.574 ; gain = 532.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1417.574 ; gain = 532.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1417.574 ; gain = 532.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1417.574 ; gain = 532.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1417.574 ; gain = 532.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |matmul_auto_pc_0              |         1|
+|2     |matmul_auto_us_0              |         1|
+|3     |matmul_auto_pc_1              |         1|
+|4     |matmul_auto_us_1              |         1|
+|5     |matmul_auto_pc_2              |         1|
+|6     |matmul_auto_us_2              |         1|
+|7     |matmul_auto_pc_3              |         1|
+|8     |matmul_auto_us_3              |         1|
+|9     |matmul_processing_system7_0_0 |         1|
+|10    |matmul_real_matmul_0_0        |         1|
+|11    |matmul_rst_ps7_0_50M_0        |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------+------+
+|      |Cell                        |Count |
++------+----------------------------+------+
+|1     |matmul_auto_pc              |     4|
+|5     |matmul_auto_us              |     4|
+|9     |matmul_processing_system7_0 |     1|
+|10    |matmul_real_matmul_0        |     1|
+|11    |matmul_rst_ps7_0_50M        |     1|
++------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1417.574 ; gain = 532.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1417.574 ; gain = 514.527
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1417.574 ; gain = 532.910
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1417.574 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1439.961 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: b20be3df
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 145 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 1445.930 ; gain = 976.059
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Personal/FPGA/FPGA_ECE8893/2023_Spring/Lab1/PartA/MatrixMultiplier/MatrixMultiplier.runs/synth_1/matmul_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file matmul_wrapper_utilization_synth.rpt -pb matmul_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 10 12:56:24 2024...

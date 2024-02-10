@@ -24,9 +24,11 @@ csynth_design
 # -evaluate option enables C/RTL cosim
 #export_design -evaluate verilog -format ip_catalog
 
+# config_interface -m_axi_data64=true
+
 # export IP to Vivado
 # Currently we're not exporting to FPGA so this command is commented;
 # if you want to try it on FPGA, please uncomment it
-# export_design -format ip_catalog
+export_design -format ip_catalog
 
 exit

@@ -21,12 +21,15 @@ void real_matmul(
     real_t MatB_DRAM[N][K], 
     real_t MatC_DRAM[M][K])
 {
-#pragma HLS interface m_axi depth=1 port=MatA_DRAM offset=slave bundle=mem
-#pragma HLS interface m_axi depth=1 port=MatB_DRAM offset=slave bundle=mem
-#pragma HLS interface m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem
+#pragma HLS interface m_axi depth=1 port=MatA_DRAM offset=slave bundle=MatA
+#pragma HLS interface m_axi depth=1 port=MatB_DRAM offset=slave bundle=MatB
+#pragma HLS interface m_axi depth=1 port=MatC_DRAM offset=slave bundle=MatC
 
 #pragma HLS interface s_axilite port=return
+
 	CallBlockMatmul: for (int counter = 0; counter < (M / BLOCK_SIZE) * (K / BLOCK_SIZE); counter++) {
+		#pragma HLS DATAFLOW
+
 		real_t MatA_BRAM[BLOCK_SIZE][N];
 		real_t MatB_BRAM[N][BLOCK_SIZE];
 		real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE];
@@ -44,7 +47,7 @@ void real_matmul(
 void LoadMatricesFromDRAMToBRAM(real_t MatA_BRAM[BLOCK_SIZE][N], real_t MatA_DRAM[M][N], real_t MatB_BRAM[N][BLOCK_SIZE], real_t MatB_DRAM[N][K], int counter) {
 	int i, j, k;
 
-	// Load values from DRAM into BRAM
+	// Load values from DRAM real_to BRAM
 	LoadMatAFromDRAMtoBRAM: for (i = 0; i < BLOCK_SIZE; i++) {
 		for (j = 0; j < N; j++) {
 			#pragma HLS PIPELINE II=1
