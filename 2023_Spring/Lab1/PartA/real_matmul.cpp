@@ -28,7 +28,7 @@ void real_matmul(
 #pragma HLS interface s_axilite port=return
 
 	CallBlockMatmul: for (int counter = 0; counter < (M / BLOCK_SIZE) * (K / BLOCK_SIZE); counter++) {
-		#pragma HLS DATAFLOW
+		#pragma HLS dataflow
 
 		real_t MatA_BRAM[BLOCK_SIZE][N];
 		real_t MatB_BRAM[N][BLOCK_SIZE];
@@ -48,15 +48,15 @@ void LoadMatricesFromDRAMToBRAM(real_t MatA_BRAM[BLOCK_SIZE][N], real_t MatA_DRA
 	int i, j, k;
 
 	// Load values from DRAM real_to BRAM
-	LoadMatAFromDRAMtoBRAM: for (i = 0; i < BLOCK_SIZE; i++) {
-		for (j = 0; j < N; j++) {
+	LoadMatAFromDRAMtoBRAMOuter: for (i = 0; i < BLOCK_SIZE; i++) {
+		LoadMatAFromDRAMtoBRAMInner: for (j = 0; j < N; j++) {
 			#pragma HLS PIPELINE II=1
 			MatA_BRAM[i][j] = MatA_DRAM[BLOCK_SIZE * (counter / (K / BLOCK_SIZE)) + i][j];
 		}
 	}
 
-	LoadMatBFromDRAMtoBRAM: for (i = 0; i < BLOCK_SIZE; i++) {
-		for (j = 0; j < N; j++) {
+	LoadMatBFromDRAMtoBRAMOuter: for (i = 0; i < BLOCK_SIZE; i++) {
+		LoadMatBFromDRAMtoBRAMInner: for (j = 0; j < N; j++) {
 			#pragma HLS PIPELINE II=1
 			MatB_BRAM[j][i] = MatB_DRAM[j][i + BLOCK_SIZE * (counter % (K / BLOCK_SIZE))];
 		}
@@ -65,11 +65,11 @@ void LoadMatricesFromDRAMToBRAM(real_t MatA_BRAM[BLOCK_SIZE][N], real_t MatA_DRA
 
 void PerformMatrixCalculation(real_t MatA_BRAM[BLOCK_SIZE][N], real_t MatB_BRAM[N][BLOCK_SIZE], real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE]) {
 	// Calculation Loop
-	PerformBlockMatrixCalculation: for (int i = 0; i < BLOCK_SIZE; i++) {
-		for (int j = 0; j < BLOCK_SIZE; j++) {
+	PerformBlockMatrixCalculationOuter: for (int i = 0; i < BLOCK_SIZE; i++) {
+		PerformBlockMatrixCalculationInner: for (int j = 0; j < BLOCK_SIZE; j++) {
 			MatC_BRAM[i][j] = 0;
 			#pragma HLS PIPELINE II=1
-			for (int k = 0; k < N; k++) {
+			PerformBlockMatrixCalculationElementWise: for (int k = 0; k < N; k++) {
 				MatC_BRAM[i][j] += MatA_BRAM[i][k] * MatB_BRAM[k][j];
 			}
 		}
@@ -77,8 +77,8 @@ void PerformMatrixCalculation(real_t MatA_BRAM[BLOCK_SIZE][N], real_t MatB_BRAM[
 }
 
 void LoadMatricesFromBRAMToDRAM(real_t MatC_BRAM[BLOCK_SIZE][BLOCK_SIZE], real_t MatC_DRAM[M][K], int counter) {
-	LoadArraysFromBRAMtoDRAM: for (int i = 0; i < BLOCK_SIZE; i++) {
-		for (int j = 0; j < BLOCK_SIZE; j++) {
+	LoadArraysFromBRAMtoDRAMOuter: for (int i = 0; i < BLOCK_SIZE; i++) {
+		LoadArraysFromBRAMtoDRAMInner: for (int j = 0; j < BLOCK_SIZE; j++) {
 			#pragma HLS PIPELINE II=1
 			MatC_DRAM[BLOCK_SIZE * (counter / (K / BLOCK_SIZE)) + i][j + BLOCK_SIZE * (counter % (K / BLOCK_SIZE))] = MatC_BRAM[i][j];
 		}
